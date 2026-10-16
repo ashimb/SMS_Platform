@@ -7,3 +7,5 @@ apps/api/tests/conftest.py:generic-api-key:40
 apps/api/tests/unit/test_security.py:generic-api-key:70
 # Same: expired token built for a security test.
 apps/api/tests/security/test_security_controls.py:generic-api-key:127
+# Fake reset token in a URL used to test that tokens are stripped from the address bar.
+apps/portal/src/lib/lib.test.ts:generic-api-key:95

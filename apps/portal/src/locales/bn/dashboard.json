@@ -1,0 +1,93 @@
+{
+  "title": "ড্যাশবোর্ড",
+  "greeting": {
+    "morning": "সুপ্রভাত, {{name}}",
+    "afternoon": "শুভ অপরাহ্ন, {{name}}",
+    "evening": "শুভ সন্ধ্যা, {{name}}"
+  },
+  "asOf": "হালনাগাদ: {{time}}",
+  "quickActions": "দ্রুত কাজ",
+  "viewAll": "সব দেখুন",
+  "unavailable": {
+    "title": "আপনার ড্যাশবোর্ড প্রায় প্রস্তুত",
+    "body": "বিদ্যালয়ের তথ্য যুক্ত হলেই এখানে সরাসরি পরিসংখ্যান দেখা যাবে। পোর্টালের বাকি সব কিছু স্বাভাবিকভাবে কাজ করছে।"
+  },
+  "actions": {
+    "markAttendance": "উপস্থিতি নিন",
+    "markAttendanceHint": "আজকের হাজিরা খাতা",
+    "sendNotice": "বিজ্ঞপ্তি পাঠান",
+    "sendNoticeHint": "অভিভাবক ও কর্মীদের",
+    "recordPayment": "পেমেন্ট নথিভুক্ত করুন",
+    "recordPaymentHint": "নগদ, চেক বা UPI",
+    "addStudent": "শিক্ষার্থী যোগ করুন",
+    "addStudentHint": "নতুন ভর্তি",
+    "openStudents": "শিক্ষার্থী তালিকা খুলুন",
+    "enterMarks": "নম্বর দিন",
+    "enterMarksHint": "বাকি মূল্যায়ন",
+    "messageParents": "অভিভাবকদের বার্তা দিন",
+    "messageParentsHint": "আপনার সেকশন",
+    "payNow": "এখনই পেমেন্ট করুন",
+    "payFees": "ফি জমা দিন",
+    "payFeesHint": "UPI, কার্ড, নেট ব্যাংকিং",
+    "viewAttendance": "উপস্থিতি",
+    "viewAttendanceHint": "দিন অনুযায়ী",
+    "viewResults": "ফলাফল",
+    "viewResultsHint": "রিপোর্ট কার্ড",
+    "readNotices": "বিজ্ঞপ্তি",
+    "readNoticesHint": "বিদ্যালয় থেকে"
+  },
+  "admin": {
+    "keyFigures": "মূল পরিসংখ্যান",
+    "students": "ভর্তি থাকা শিক্ষার্থী",
+    "attendanceToday": "আজকের উপস্থিতি",
+    "unmarkedCount_one": "{{count}}টি সেকশনের উপস্থিতি এখনও নেওয়া হয়নি",
+    "unmarkedCount_other": "{{count}}টি সেকশনের উপস্থিতি এখনও নেওয়া হয়নি",
+    "allMarked": "সব সেকশনের উপস্থিতি নেওয়া হয়েছে",
+    "feesMtd": "এই মাসে আদায় হওয়া ফি",
+    "ofTarget": "প্রত্যাশিত {{target}}-এর মধ্যে",
+    "approvals": "অনুমোদনের অপেক্ষায়",
+    "trendTitle": "উপস্থিতি, শেষ ১৪ দিন",
+    "trendCaption": "শেষ ১৪টি স্কুল-দিবসের দৈনিক উপস্থিতির শতাংশ",
+    "noTrend": "এখনও কোনো উপস্থিতি নথিভুক্ত হয়নি।",
+    "present": "উপস্থিত",
+    "date": "তারিখ",
+    "unmarkedTitle": "এখনও নেওয়া হয়নি",
+    "noticesTitle": "সাম্প্রতিক বিজ্ঞপ্তি",
+    "noNotices": "সম্প্রতি কোনো বিজ্ঞপ্তি পাঠানো হয়নি।",
+    "read": "পড়া হয়েছে",
+    "readRate": "{{title}} — পড়ার হার",
+    "eventsTitle": "আসন্ন",
+    "noEvents": "কোনো আসন্ন অনুষ্ঠান নেই।"
+  },
+  "teacher": {
+    "attendanceDue": "উপস্থিতি নেওয়া বাকি: {{sections}}",
+    "attendanceDueHint": "জমা দিলেই অনুপস্থিতির খবর অভিভাবকদের জানানো হবে।",
+    "classesToday": "আজকের ক্লাস",
+    "marksPending": "নম্বর দেওয়া বাকি",
+    "unread": "অপঠিত বার্তা",
+    "todayTitle": "আজকের সময়সূচি",
+    "noClasses": "আজ কোনো ক্লাস নেই।",
+    "now": "এখন",
+    "next": "পরবর্তী",
+    "homeworkTitle": "বাড়ির কাজ",
+    "homeworkToday_one": "আজ আপনি {{count}}টি বাড়ির কাজ দিয়েছেন।",
+    "homeworkToday_other": "আজ আপনি {{count}}টি বাড়ির কাজ দিয়েছেন।"
+  },
+  "parent": {
+    "childrenLabel": "আপনার সন্তানেরা",
+    "today": {
+      "present": "আজ উপস্থিত",
+      "absent": "আজ অনুপস্থিত",
+      "late": "আজ দেরিতে",
+      "not_marked": "এখনও নেওয়া হয়নি"
+    },
+    "attendance": "এই বছরের উপস্থিতি",
+    "dues": "বকেয়া ফি",
+    "dueOn": "শেষ তারিখ {{date}}",
+    "latestResult": "{{exam}}: {{grade}}",
+    "noResult": "এখনও কোনো ফলাফল প্রকাশিত হয়নি",
+    "noNotice": "কোনো নতুন বিজ্ঞপ্তি নেই",
+    "noChildrenTitle": "এখনও কোনো সন্তান যুক্ত হয়নি",
+    "noChildrenBody": "বিদ্যালয় আপনার সন্তানদের আপনার অ্যাকাউন্টে যুক্ত করলে তাদের উপস্থিতি, ফি ও ফলাফল এখানে দেখা যাবে।"
+  }
+}

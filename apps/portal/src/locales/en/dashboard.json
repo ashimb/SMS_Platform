@@ -1,0 +1,93 @@
+{
+  "title": "Dashboard",
+  "greeting": {
+    "morning": "Good morning, {{name}}",
+    "afternoon": "Good afternoon, {{name}}",
+    "evening": "Good evening, {{name}}"
+  },
+  "asOf": "Updated {{time}}",
+  "quickActions": "Quick actions",
+  "viewAll": "View all",
+  "unavailable": {
+    "title": "Your dashboard is almost ready",
+    "body": "Live figures will appear here once the school's data is connected. Everything else in the portal works as usual."
+  },
+  "actions": {
+    "markAttendance": "Mark attendance",
+    "markAttendanceHint": "Today's register",
+    "sendNotice": "Send a notice",
+    "sendNoticeHint": "To parents and staff",
+    "recordPayment": "Record a payment",
+    "recordPaymentHint": "Cash, cheque or UPI",
+    "addStudent": "Add a student",
+    "addStudentHint": "New admission",
+    "openStudents": "Open students",
+    "enterMarks": "Enter marks",
+    "enterMarksHint": "Pending assessments",
+    "messageParents": "Message parents",
+    "messageParentsHint": "Your sections",
+    "payNow": "Pay now",
+    "payFees": "Pay fees",
+    "payFeesHint": "UPI, cards, net banking",
+    "viewAttendance": "Attendance",
+    "viewAttendanceHint": "Day by day",
+    "viewResults": "Results",
+    "viewResultsHint": "Report cards",
+    "readNotices": "Notices",
+    "readNoticesHint": "From the school"
+  },
+  "admin": {
+    "keyFigures": "Key figures",
+    "students": "Students enrolled",
+    "attendanceToday": "Attendance today",
+    "unmarkedCount_one": "{{count}} section not marked yet",
+    "unmarkedCount_other": "{{count}} sections not marked yet",
+    "allMarked": "All sections marked",
+    "feesMtd": "Fees collected this month",
+    "ofTarget": "of {{target}} expected",
+    "approvals": "Approvals waiting",
+    "trendTitle": "Attendance, last 14 days",
+    "trendCaption": "Daily attendance percentage over the last 14 school days",
+    "noTrend": "No attendance recorded yet.",
+    "present": "Present",
+    "date": "Date",
+    "unmarkedTitle": "Not marked yet",
+    "noticesTitle": "Recent notices",
+    "noNotices": "No notices sent recently.",
+    "read": "Read",
+    "readRate": "Read rate for {{title}}",
+    "eventsTitle": "Coming up",
+    "noEvents": "No upcoming events."
+  },
+  "teacher": {
+    "attendanceDue": "Attendance due: {{sections}}",
+    "attendanceDueHint": "Parents are notified about absences once you submit.",
+    "classesToday": "Classes today",
+    "marksPending": "Marks to enter",
+    "unread": "Unread messages",
+    "todayTitle": "Today's timetable",
+    "noClasses": "No classes today.",
+    "now": "Now",
+    "next": "Next",
+    "homeworkTitle": "Homework",
+    "homeworkToday_one": "You've posted {{count}} homework today.",
+    "homeworkToday_other": "You've posted {{count}} homework assignments today."
+  },
+  "parent": {
+    "childrenLabel": "Your children",
+    "today": {
+      "present": "Present today",
+      "absent": "Absent today",
+      "late": "Late today",
+      "not_marked": "Not marked yet"
+    },
+    "attendance": "Attendance this year",
+    "dues": "Fees due",
+    "dueOn": "Due by {{date}}",
+    "latestResult": "{{exam}}: {{grade}}",
+    "noResult": "No results published yet",
+    "noNotice": "No new notices",
+    "noChildrenTitle": "No children linked yet",
+    "noChildrenBody": "Once the school links your children to your account, their attendance, fees and results appear here."
+  }
+}

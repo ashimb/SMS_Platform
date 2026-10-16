@@ -1,0 +1,132 @@
+{
+  "guardians": {
+    "title": "Guardians",
+    "description": "Parents and guardians linked to each student.",
+    "highlights": [
+      "Link parents and guardians to children, with verified mobile numbers",
+      "Set who can pick up, receive messages and see fees",
+      "Record custody restrictions the whole school respects",
+      "Invite parents to the parent app in one tap"
+    ]
+  },
+  "staff": {
+    "title": "Staff",
+    "description": "Teaching and non-teaching staff, roles and assignments.",
+    "highlights": [
+      "Staff profiles, documents and qualifications",
+      "Roles and permissions with scoped access",
+      "Class-teacher and subject-teacher assignments",
+      "Leave requests and approvals"
+    ]
+  },
+  "academics": {
+    "title": "Academics",
+    "description": "Academic years, classes, sections and subjects.",
+    "highlights": [
+      "Academic years and terms",
+      "Classes, sections and class capacity",
+      "Subjects and curricula per class",
+      "Homework with due dates and submissions"
+    ]
+  },
+  "timetable": {
+    "title": "Timetable",
+    "description": "Class and teacher timetables.",
+    "highlights": [
+      "Build timetables with clash detection",
+      "\"My timetable\" for every teacher",
+      "A today strip showing the current and next period",
+      "Substitutions when a teacher is absent"
+    ]
+  },
+  "attendance": {
+    "title": "Attendance",
+    "description": "Daily registers, absence alerts and attendance trends.",
+    "highlights": [
+      "Mark a class in under a minute, even offline",
+      "Automatic SMS/WhatsApp alerts to parents for absences",
+      "Low-attendance warnings at 80% and 75%",
+      "Monthly registers and reports"
+    ]
+  },
+  "exams": {
+    "title": "Exams & results",
+    "description": "Assessments, marks entry, grading and report cards.",
+    "highlights": [
+      "Exam schedules and assessment patterns",
+      "Fast marks entry with validation",
+      "Grading schemes and result approval",
+      "Report cards in English and Bengali"
+    ]
+  },
+  "admissions": {
+    "title": "Admissions",
+    "description": "Enquiries, applications and the admissions funnel.",
+    "highlights": [
+      "Capture enquiries from the website and walk-ins",
+      "Online applications with document upload",
+      "Follow-up reminders and a funnel dashboard",
+      "Convert accepted applicants into students"
+    ]
+  },
+  "fees": {
+    "title": "Fees",
+    "description": "Fee structures, collection, receipts and dues.",
+    "highlights": [
+      "Fee structures, concessions and instalments",
+      "Online payments with UPI, cards and net banking",
+      "Instant receipts and day-close reconciliation",
+      "Dues reminders and defaulter reports"
+    ]
+  },
+  "communication": {
+    "title": "Messages & notices",
+    "description": "Notices, messages and alerts to parents and staff.",
+    "highlights": [
+      "Notices with read receipts",
+      "Parent–teacher messaging with safe hours",
+      "SMS, WhatsApp, email and in-app delivery",
+      "Emergency broadcasts to the whole school"
+    ]
+  },
+  "cms": {
+    "title": "Website",
+    "description": "Your school website's pages, news and gallery.",
+    "highlights": [
+      "Edit pages with a friendly editor",
+      "News, events and photo galleries",
+      "Draft, review and publish workflow",
+      "Theme that follows your school branding"
+    ]
+  },
+  "reports": {
+    "title": "Reports",
+    "description": "Standard reports and exports.",
+    "highlights": [
+      "Ready-made reports for attendance, fees and results",
+      "Filters, totals and an \"as of\" time on every report",
+      "Export to Excel and PDF",
+      "Large reports prepared in the background"
+    ]
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "School profile, branding and preferences.",
+    "highlights": [
+      "School profile and contact details",
+      "Logo, colours and fonts with accessibility checks",
+      "Academic and notification preferences",
+      "Integrations for payments and messaging"
+    ]
+  },
+  "audit": {
+    "title": "Audit log",
+    "description": "A tamper-evident record of important actions.",
+    "highlights": [
+      "Who did what, and when, across the portal",
+      "Filters by person, action and date",
+      "Tamper-evident (hash-chained) records",
+      "Exports for inspections"
+    ]
+  }
+}

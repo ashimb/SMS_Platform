@@ -1,0 +1,42 @@
+/*
+ * Portal stylesheet: Tailwind v4 with the shared SchoolPlatform theme (design tokens as CSS
+ * variables, light/dark, tenant brand overrides) from @school-platform/config + @school-platform/ui.
+ */
+@import "@school-platform/config/tailwind/app.css";
+
+@source "../";
+
+@keyframes sp-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--sp-bg);
+  }
+
+  #root {
+    min-height: 100dvh;
+    isolation: isolate;
+  }
+
+  .sp-theme-switching,
+  .sp-theme-switching * {
+    transition: none !important;
+  }
+
+  [type="search"]::-webkit-search-cancel-button {
+    cursor: pointer;
+  }
+}

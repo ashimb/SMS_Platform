@@ -1,0 +1,3 @@
+# The portal holds private school data; nothing here should be indexed.
+User-agent: *
+Disallow: /
