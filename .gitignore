@@ -1,0 +1,50 @@
+# Secrets and local environment — never commit real values (use .env.example)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+infra/nginx/certs/*
+!infra/nginx/certs/.gitkeep
+
+# Node
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Backups and local data
+backups/
+*.sql
+*.sql.gz
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Storybook
+storybook-static/

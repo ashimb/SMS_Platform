@@ -1,0 +1,318 @@
+# SchoolPlatform CI (FRD §12.7 PR smoke suite, §13.4 quality gates).
+#
+# Jobs that need application code are gated by the `detect` job, so the pipeline is green
+# while apps/* are still empty and turns those jobs on automatically once each app exists.
+# Third-party actions are pinned to full commit SHAs (supply-chain hardening); the version
+# tag is in the trailing comment.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "24"
+  PYTHON_VERSION: "3.14"
+  API_DIR: apps/api
+  FORCE_COLOR: "1"
+
+jobs:
+  detect:
+    name: Detect scaffolded apps
+    runs-on: ubuntu-latest
+    outputs:
+      api: ${{ steps.detect.outputs.api }}
+      portal: ${{ steps.detect.outputs.portal }}
+      website: ${{ steps.detect.outputs.website }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - id: detect
+        run: |
+          echo "api=$([ -f apps/api/pyproject.toml ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "portal=$([ -f apps/portal/package.json ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "website=$([ -f apps/website/package.json ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          cat "$GITHUB_OUTPUT"
+
+  lint:
+    name: Lint
+    needs: detect
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: Prettier
+        run: npm run format:check
+      - name: ESLint
+        run: npm run lint
+      - name: Commit messages (Conventional Commits)
+        if: github.event_name == 'pull_request'
+        run: npx --no-install commitlint --from "${{ github.event.pull_request.base.sha }}" --to "${{ github.event.pull_request.head.sha }}" --verbose
+      - name: Secret scan (gitleaks)
+        run: |
+          docker run --rm -v "$PWD:/repo" \
+            -e GIT_CONFIG_COUNT=1 -e GIT_CONFIG_KEY_0=safe.directory -e GIT_CONFIG_VALUE_0=/repo \
+            ghcr.io/gitleaks/gitleaks:v8.30.1 \
+            git /repo --no-banner --redact --exit-code 1
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        if: needs.detect.outputs.api == 'true'
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: apps/api/uv.lock
+      - name: Ruff
+        if: needs.detect.outputs.api == 'true'
+        working-directory: ${{ env.API_DIR }}
+        run: |
+          uv sync --frozen
+          uv run ruff check .
+          uv run ruff format --check .
+
+  typecheck:
+    name: Typecheck
+    needs: detect
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: TypeScript (all workspaces)
+        run: npm run typecheck
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        if: needs.detect.outputs.api == 'true'
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: apps/api/uv.lock
+      - name: mypy --strict
+        if: needs.detect.outputs.api == 'true'
+        working-directory: ${{ env.API_DIR }}
+        run: |
+          uv sync --frozen
+          uv run mypy
+
+  import-linter:
+    name: Module boundaries (import-linter)
+    needs: detect
+    if: needs.detect.outputs.api == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: apps/api/uv.lock
+      - working-directory: ${{ env.API_DIR }}
+        run: |
+          uv sync --frozen
+          uv run lint-imports --config importlinter.ini
+
+  backend-tests:
+    name: Backend unit + integration + security (MySQL)
+    needs: detect
+    if: needs.detect.outputs.api == 'true'
+    runs-on: ubuntu-latest
+    # MySQL 8.4 and Redis come from testcontainers (tests/conftest.py), which runs the real
+    # Alembic migrations, so no service containers are declared here.
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: apps/api/uv.lock
+      - working-directory: ${{ env.API_DIR }}
+        run: |
+          uv sync --frozen
+          uv run pytest -m "not tenant_isolation" --cov=app --cov-report=term-missing --cov-report=xml
+
+  tenant-isolation:
+    name: Tenant-isolation suite (blocking)
+    needs: detect
+    if: needs.detect.outputs.api == 'true'
+    runs-on: ubuntu-latest
+    # MySQL 8.4 and Redis come from testcontainers (tests/conftest.py), which runs the real
+    # Alembic migrations, so no service containers are declared here.
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: apps/api/uv.lock
+      - working-directory: ${{ env.API_DIR }}
+        run: |
+          uv sync --frozen
+          uv run pytest -m tenant_isolation
+
+  migrations:
+    name: Alembic migrations on a fresh DB
+    needs: detect
+    if: needs.detect.outputs.api == 'true'
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4.11
+        env:
+          MYSQL_ROOT_PASSWORD: ci_root_password
+          MYSQL_DATABASE: school_platform_migrations
+          MYSQL_USER: school_app
+          MYSQL_PASSWORD: ci_app_password
+        ports: ["3306:3306"]
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -pci_root_password --silent"
+          --health-interval=10s --health-timeout=5s --health-retries=10
+    env:
+      APP_ENV: test
+      DB_HOST: 127.0.0.1
+      DB_PORT: "3306"
+      DB_NAME: school_platform_migrations
+      DB_USER: school_app
+      DB_PASSWORD: ci_app_password
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: apps/api/uv.lock
+      - name: Upgrade to head, verify no model drift, round-trip the latest revision
+        working-directory: ${{ env.API_DIR }}
+        run: |
+          uv sync --frozen
+          uv run alembic upgrade head
+          uv run alembic check
+          uv run alembic downgrade -1
+          uv run alembic upgrade head
+
+  pip-audit:
+    name: Python dependency audit
+    needs: detect
+    if: needs.detect.outputs.api == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      # pip-audit has no severity filter: it fails on ANY known vulnerability (stricter than
+      # high/critical). Exceptions need a documented `--ignore-vuln <ID>` with an expiry in an ADR.
+      - working-directory: ${{ env.API_DIR }}
+        run: |
+          uv export --frozen --all-groups --format requirements-txt --no-hashes > /tmp/requirements.txt
+          uvx pip-audit --strict --desc -r /tmp/requirements.txt
+
+  npm-audit:
+    name: npm dependency audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Fail on high/critical advisories
+        run: npm audit --audit-level=high
+
+  frontend-tests:
+    name: Frontend unit tests
+    needs: detect
+    if: needs.detect.outputs.portal == 'true' || needs.detect.outputs.website == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+  build:
+    name: Build
+    needs: [detect, lint, typecheck, npm-audit]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: Build JS workspaces
+        run: npm run build
+      - name: Validate compose files
+        run: |
+          cp .env.example .env
+          docker compose config --quiet
+          docker compose -f docker-compose.yml config --quiet
+      - name: Build API image
+        if: needs.detect.outputs.api == 'true'
+        run: docker build --target runtime -t school-platform/api:ci apps/api
+      - name: Build portal image
+        if: needs.detect.outputs.portal == 'true'
+        run: docker build -f infra/docker/portal.Dockerfile --target runtime -t school-platform/portal:ci .
+      - name: Build website image
+        if: needs.detect.outputs.website == 'true'
+        run: docker build -f infra/docker/website.Dockerfile --target runtime -t school-platform/website:ci .
+
+  e2e-smoke:
+    name: Playwright smoke
+    needs: [detect, build]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: Prepare environment
+        run: |
+          cp .env.example .env
+          bash infra/scripts/dev_certs.sh
+      - name: Start stack (production-like, no dev override)
+        run: |
+          if [ "${{ needs.detect.outputs.api }}" = "true" ] && [ "${{ needs.detect.outputs.portal }}" = "true" ] && [ "${{ needs.detect.outputs.website }}" = "true" ]; then
+            docker compose -f docker-compose.yml up -d --build --wait
+          else
+            echo "Apps not scaffolded yet: starting the edge proxy only"
+            docker compose -f docker-compose.yml up -d --no-deps --wait nginx
+          fi
+      # Browser journeys (chromium/mobile-safari projects) are added with the apps; the smoke
+      # project uses API requests only, so no browser download is needed yet.
+      - name: Smoke tests
+        env:
+          E2E_BASE_URL: https://localhost
+          E2E_IGNORE_HTTPS_ERRORS: "1"
+        run: npm run test:e2e:smoke
+      - name: Service logs on failure
+        if: failure()
+        run: docker compose -f docker-compose.yml logs --no-color --tail=300
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: failure()
+        with:
+          name: playwright-report
+          path: e2e/playwright-report
+          retention-days: 7
+      - name: Stop stack
+        if: always()
+        run: docker compose -f docker-compose.yml down -v

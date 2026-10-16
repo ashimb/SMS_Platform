@@ -1,0 +1,43 @@
+{
+  "name": "school-platform",
+  "version": "0.0.0",
+  "private": true,
+  "description": "SchoolPlatform monorepo: public school website + CMS and School Management System portal.",
+  "type": "module",
+  "workspaces": [
+    "apps/portal",
+    "apps/website",
+    "packages/*",
+    "e2e"
+  ],
+  "engines": {
+    "node": ">=24",
+    "npm": ">=11"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test:unit --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "test:e2e": "npm run test:e2e -w e2e",
+    "test:e2e:smoke": "npm run test:e2e -w e2e -- --project=smoke",
+    "gen-client": "npm run generate -w packages/api-client --if-present"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.2"
+  },
+  "overrides": {
+    "openapi-typescript": {
+      "typescript": "$typescript"
+    }
+  }
+}

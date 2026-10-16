@@ -1,0 +1,16 @@
+node_modules/
+package-lock.json
+dist/
+build/
+.next/
+coverage/
+playwright-report/
+test-results/
+apps/api/
+backups/
+infra/nginx/certs/
+*.md
+storybook-static/
+**/src/generated/
+packages/ui/src/styles/tokens.css
+packages/ui/src/styles/theme.css

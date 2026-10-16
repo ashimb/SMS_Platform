@@ -1,0 +1,76 @@
+# pre-commit hooks. Install once per clone:
+#   pre-commit install            (installs pre-commit and commit-msg hooks, see default_install_hook_types)
+# Run everything manually:
+#   pre-commit run --all-files
+#
+# Local hooks call tools from the repo's own lockfiles (npm for JS, uv for Python), so local and
+# CI versions always match. Run `npm ci` (and `uv sync` in apps/api once it exists) first.
+
+default_install_hook_types: [pre-commit, commit-msg]
+default_stages: [pre-commit]
+minimum_pre_commit_version: "4.0.0"
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: check-case-conflict
+      - id: check-illegal-windows-names
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.0
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+        files: ^apps/api/
+      - id: ruff-format
+        files: ^apps/api/
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy (strict, apps/api)
+        entry: uv run --directory apps/api mypy
+        language: system
+        types: [python]
+        files: ^apps/api/
+        pass_filenames: false
+
+      - id: prettier
+        name: prettier
+        entry: npx --no-install prettier --write --ignore-unknown
+        language: system
+        types_or: [javascript, jsx, ts, tsx, json, yaml, css, scss, html]
+        exclude: ^(apps/api/|package-lock\.json$)
+
+      - id: eslint
+        name: eslint
+        entry: npx --no-install eslint --max-warnings=0 --no-warn-ignored
+        language: system
+        types_or: [javascript, jsx, ts, tsx]
+        exclude: ^apps/api/
+
+      - id: commitlint
+        name: commitlint (Conventional Commits)
+        entry: npx --no-install commitlint --edit
+        language: system
+        stages: [commit-msg]
+        pass_filenames: false
+        always_run: true

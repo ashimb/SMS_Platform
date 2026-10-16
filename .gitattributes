@@ -1,0 +1,30 @@
+# Normalise line endings to LF in the repo (important on Windows checkouts).
+* text=auto eol=lf
+
+*.sh text eol=lf
+Makefile text eol=lf
+*.Dockerfile text eol=lf
+*.conf text eol=lf
+
+# Windows-only scripts keep CRLF
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.gz binary
+*.zip binary
+
+# Lockfiles: treat as generated in diffs
+package-lock.json linguist-generated=true -diff
+uv.lock linguist-generated=true -diff
