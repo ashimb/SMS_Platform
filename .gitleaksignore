@@ -1,0 +1,9 @@
+# Reviewed gitleaks false positives (exact fingerprints only; everything else is still scanned).
+# Each entry: why it is not a secret.
+
+# Test-only password for fictional fixture users in the throwaway test database.
+apps/api/tests/conftest.py:generic-api-key:40
+# Arguments to create_token(..., kind="access", ttl_seconds=-60): builds an expired test token.
+apps/api/tests/unit/test_security.py:generic-api-key:70
+# Same: expired token built for a security test.
+apps/api/tests/security/test_security_controls.py:generic-api-key:127

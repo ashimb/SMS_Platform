@@ -1,0 +1,153 @@
+[project]
+name = "school-platform-api"
+version = "0.1.0"
+description = "SchoolPlatform API: FastAPI modular monolith and ARQ worker."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "alembic>=1.20.0",
+    "argon2-cffi>=25.1.0",
+    "arq>=0.28.0",
+    "boto3>=1.43.114",
+    "clamd>=1.0.2",
+    "cryptography>=50.0.2",
+    "email-validator>=2.3.0",
+    "fastapi>=0.143.1",
+    "gunicorn>=26.2.0",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.6",
+    "openpyxl>=3.1.5",
+    "orjson>=3.13.0",
+    "phonenumbers>=9.0.41",
+    "pillow>=12.3.0",
+    "prometheus-fastapi-instrumentator>=8.1.0",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.0",
+    "pyjwt>=2.15.1",
+    "pymysql>=1.2.3",
+    "pyotp>=2.10.0",
+    "python-magic>=0.4.27",
+    "python-multipart>=0.0.32",
+    "qrcode>=8.2",
+    "redis>=5.3.1",
+    "sentry-sdk>=2.72.0",
+    "sqlalchemy>=2.1.4",
+    "structlog>=26.1.0",
+    "tenacity>=9.2.1",
+    "uvicorn[standard]>=0.54.0",
+    "weasyprint>=70.0",
+]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.9.4",
+    "boto3-stubs[s3]>=1.43.114",
+    "factory-boy>=3.3.3",
+    "faker>=40.43.0",
+    "freezegun>=1.5.5",
+    "httpx2>=2.13.1",
+    "import-linter>=2.15",
+    "mypy>=2.4.0",
+    "pip-audit>=2.10.1",
+    "pre-commit>=4.7.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "pytest-xdist>=3.8.0",
+    "ruff>=0.17.0",
+    "testcontainers[mysql,redis]>=4.13.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "app"
+module-root = ""
+
+# ---------------------------------------------------------------------------------------------
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+extend-exclude = ["migrations/versions"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W", "F", "I", "B", "UP", "N", "S", "C4", "SIM", "RET", "PTH", "PL", "RUF",
+    "ASYNC", "DTZ", "T20", "ERA", "PIE", "TID",
+]
+ignore = [
+    "PLR0913",  # FastAPI endpoints legitimately take many dependencies
+    "PLR2004",  # magic values are fine in validators/tests
+    "RUF012",   # SQLAlchemy/pydantic class attributes
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106", "PLR2004", "DTZ", "PLR0915", "PLC0415"]  # imports after env setup
+"scripts/**" = ["T201"]
+"migrations/**" = ["ERA001"]
+"app/modules/*/router.py" = ["PLR0917"]  # FastAPI endpoints declare dependencies as parameters
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = [
+    "fastapi.Depends", "fastapi.Query", "fastapi.Cookie", "fastapi.Header", "fastapi.Body",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "tests", "scripts"]
+
+# ---------------------------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.14"
+strict = true
+warn_unreachable = true
+plugins = ["pydantic.mypy"]
+files = ["app"]
+exclude = ["^migrations/versions/"]
+
+[[tool.mypy.overrides]]
+module = ["pyotp", "pyotp.*", "qrcode", "qrcode.*", "clamd", "magic", "weasyprint", "factory", "factory.*", "testcontainers.*", "freezegun"]
+ignore_missing_imports = true
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+
+# ---------------------------------------------------------------------------------------------
+[tool.pytest.ini_options]
+minversion = "9.0"
+testpaths = ["tests"]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+xfail_strict = true
+empty_parameter_set_mark = "fail_at_collect"
+filterwarnings = [
+    "error::DeprecationWarning:app.*",
+    # testcontainers internals (not our code); remove when upstream migrates to wait strategies
+    "ignore::DeprecationWarning:testcontainers.*",
+]
+markers = [
+    "unit: fast tests without external services",
+    "integration: tests against real MySQL and Redis containers",
+    "tenant_isolation: cross-tenant isolation guarantees (blocking in CI)",
+    "security: security controls (authN/authZ, headers, rate limits, error envelope)",
+]
+
+[tool.coverage.run]
+source = ["app"]
+branch = true
+omit = ["app/worker/main.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 85
+exclude_also = ["if TYPE_CHECKING:", "raise NotImplementedError", "@overload"]
+
+# ---------------------------------------------------------------------------------------------
+[tool.bandit]
+exclude_dirs = ["tests", "migrations", ".venv"]
