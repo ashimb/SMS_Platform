@@ -1,0 +1,11 @@
+/*
+ * Full stylesheet entry for the UI package's own tooling (Storybook, Prettier class sorting).
+ * Apps use @school-platform/config/tailwind/app.css, which imports the same token files.
+ */
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./theme.css";
+
+@source "../";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));

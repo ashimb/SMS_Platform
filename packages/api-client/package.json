@@ -1,0 +1,33 @@
+{
+  "name": "@school-platform/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Typed client for the SchoolPlatform API (openapi-fetch + generated schema).",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "gen": "node scripts/gen.ts",
+    "generate": "npm run gen",
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-schema.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test:unit": "vitest run"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "openapi-typescript": "^7.13.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  }
+}

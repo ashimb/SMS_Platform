@@ -1,0 +1,17 @@
+/*
+ * Shared Tailwind v4 entry point for SchoolPlatform apps (portal, website).
+ *
+ *   In an app's main CSS:  @import "@school-platform/config/tailwind/app.css";
+ *
+ * It loads Tailwind, the design tokens (CSS variables, light + dark), the theme mapping that turns
+ * tokens into utilities (bg-primary-600, text-fg-muted, shadow-2, ...), and tells Tailwind to scan
+ * the UI package so component classes are generated.
+ */
+@import "tailwindcss";
+@import "../../ui/src/styles/tokens.css";
+@import "../../ui/src/styles/theme.css";
+
+@source "../../ui/src";
+
+/* Class-based dark mode via [data-theme="dark"] (the token file also follows the OS setting). */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));

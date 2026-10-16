@@ -1,0 +1,17 @@
+{
+  "extends": "@school-platform/config/tsconfig/react.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "types": ["node"]
+  },
+  "include": [
+    "src",
+    "scripts",
+    ".storybook",
+    "tailwind-preset.ts",
+    "vitest.config.ts",
+    "vitest.setup.ts"
+  ]
+}
