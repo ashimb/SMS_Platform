@@ -217,7 +217,8 @@ jobs:
       # high/critical). Exceptions need a documented `--ignore-vuln <ID>` with an expiry in an ADR.
       - working-directory: ${{ env.API_DIR }}
         run: |
-          uv export --frozen --all-groups --format requirements-txt --no-hashes > /tmp/requirements.txt
+          # No header/comments and no editable project line: pip-audit's parser rejects them.
+          uv export --frozen --all-groups --format requirements-txt --no-hashes --no-header --no-emit-project --no-annotate > /tmp/requirements.txt
           uvx pip-audit --strict --desc -r /tmp/requirements.txt
 
   npm-audit:
