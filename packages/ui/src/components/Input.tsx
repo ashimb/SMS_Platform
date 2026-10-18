@@ -1,7 +1,7 @@
 import { type ComponentProps, type ReactNode } from "react";
 
 import { cn } from "../lib/cn.ts";
-import { fieldBase } from "../lib/styles.ts";
+import { controlHeight, fieldBase } from "../lib/styles.ts";
 import { useFormField } from "./FormField.tsx";
 
 export interface InputProps extends ComponentProps<"input"> {
@@ -28,7 +28,8 @@ export function Input({
       type={type}
       className={cn(
         fieldBase,
-        "h-10 px-3",
+        controlHeight,
+        "px-3",
         leading !== undefined && "pl-9",
         trailing !== undefined && "pr-9",
         className,

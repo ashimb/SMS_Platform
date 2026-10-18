@@ -1,4 +1,4 @@
-import { Card, Skeleton } from "@school-platform/ui";
+import { Card, Skeleton, StatCardGrid } from "@school-platform/ui";
 import { ArrowRight, Sparkles } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
@@ -141,11 +141,11 @@ export function DashboardSkeleton({ stats = 4 }: { stats?: number }) {
         <Skeleton className="h-4 w-40" />
         <Skeleton className="h-8 w-72" />
       </div>
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <StatCardGrid>
         {Array.from({ length: stats }, (_, i) => (
           <Skeleton key={i} className="h-28 rounded-xl" />
         ))}
-      </div>
+      </StatCardGrid>
       <div className="grid gap-4 lg:grid-cols-3">
         <Skeleton className="h-72 rounded-xl lg:col-span-2" />
         <Skeleton className="h-72 rounded-xl" />

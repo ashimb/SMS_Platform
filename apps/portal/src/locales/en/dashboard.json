@@ -48,6 +48,8 @@
     "approvals": "Approvals waiting",
     "trendTitle": "Attendance, last 14 days",
     "trendCaption": "Daily attendance percentage over the last 14 school days",
+    "viewAsTable": "View as table",
+    "viewAsChart": "View as chart",
     "noTrend": "No attendance recorded yet.",
     "present": "Present",
     "date": "Date",

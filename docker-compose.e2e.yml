@@ -1,0 +1,56 @@
+# E2E overlay: a production-like stack for the Playwright suite (and Lighthouse runs).
+#
+#   docker compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose.e2e.yml \
+#     up -d --build mysql redis api portal website nginx
+#
+# Layered on the dev files (the API keeps its dev target: ephemeral signing keys, no production
+# secret requirements) but the two front ends run as their real production images (Next.js
+# standalone server, static portal behind nginx), so headers, ISR and bundles are what ships.
+# Only the services listed above are started; MinIO and Mailpit are not needed.
+#
+# Test-only relaxations (never use in a deployed environment):
+#   - API rate limits are raised so many sign-ins in a minute do not return 429;
+#   - the edge proxy's per-minute limits are raised the same way (the file is not modified).
+services:
+  api:
+    environment:
+      RATE_LIMIT_AUTH: "2000"
+      RATE_LIMIT_DEFAULT: "20000"
+    depends_on: !override
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  portal:
+    build:
+      target: runtime
+    image: school-platform/portal:e2e
+    read_only: true
+    volumes: !reset []
+
+  website:
+    build:
+      target: runtime
+    image: school-platform/website:e2e
+    read_only: true
+    environment:
+      SITE_URL: ${E2E_SITE_URL:-https://localhost}
+      WEBSITE_DATA_SOURCE: mock
+      REVALIDATE_SECRET: ${E2E_REVALIDATE_SECRET:-e2e-only-revalidate-secret-0123456789abcdef}
+      ENQUIRY_RATE_LIMIT: "200"
+    volumes: !reset []
+
+  nginx:
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - >-
+        sed -E 's/rate=[0-9]+r\/[ms]/rate=60000r\/m/' /etc/nginx/nginx.conf > /tmp/nginx.e2e.conf
+        && exec nginx -c /tmp/nginx.e2e.conf -g 'daemon off;'
+    depends_on: !override
+      api:
+        condition: service_started
+      portal:
+        condition: service_started
+      website:
+        condition: service_started

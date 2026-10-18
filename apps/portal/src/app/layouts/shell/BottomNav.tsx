@@ -12,10 +12,10 @@ import { NavList } from "./Sidebar.tsx";
 import type { ResolvedNavGroup } from "./useNavigation.ts";
 
 const itemClass =
-  "flex min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-lg py-1.5 text-[11px] font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none";
+  "flex min-w-11 flex-1 flex-col items-center justify-center gap-1 rounded-lg py-1.5 text-[11px] font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none";
 
 /**
- * Mobile/tablet navigation: four primary destinations within thumb reach plus "More", which opens
+ * Phone navigation (below md; tablets get the icon rail): four primary destinations within thumb reach plus "More", which opens
  * the full navigation in a bottom sheet. Targets are 56px tall (WCAG 2.5.8).
  */
 export function BottomNav({ portal, groups }: { portal: PortalKind; groups: ResolvedNavGroup[] }) {
@@ -27,7 +27,7 @@ export function BottomNav({ portal, groups }: { portal: PortalKind; groups: Reso
   return (
     <nav
       aria-label={t("nav.mobileLabel")}
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 pb-[env(safe-area-inset-bottom)] shadow-3 backdrop-blur lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 pr-safe pb-safe pl-safe shadow-3 backdrop-blur md:hidden"
     >
       <ul className="mx-auto flex h-14 max-w-xl items-stretch gap-1 px-2">
         {primary.map(({ key, path, icon: Icon }) => (

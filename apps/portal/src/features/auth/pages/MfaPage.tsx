@@ -96,7 +96,7 @@ export function MfaPage() {
         </form>
         <Link
           to={ROUTES.login}
-          className="mx-auto flex w-fit items-center gap-1.5 rounded text-sm font-medium text-fg-muted hover:text-fg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+          className="mx-auto flex min-h-11 w-fit items-center gap-1.5 rounded text-sm font-medium text-fg-muted hover:text-fg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
         >
           <ArrowLeft aria-hidden="true" className="size-4" />
           {t("actions.backToSignIn")}

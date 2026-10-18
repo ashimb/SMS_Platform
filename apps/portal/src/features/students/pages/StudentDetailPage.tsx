@@ -20,7 +20,7 @@ export function BackToStudents() {
   return (
     <Link
       to={ROUTES.students}
-      className="inline-flex items-center gap-1.5 rounded text-sm text-fg-muted hover:text-fg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+      className="inline-flex min-h-11 items-center gap-1.5 rounded text-sm text-fg-muted hover:text-fg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
     >
       <ArrowLeft aria-hidden="true" className="size-4" />
       {t("list.title")}

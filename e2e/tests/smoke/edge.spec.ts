@@ -6,23 +6,27 @@ import { expect, test } from "@playwright/test";
  */
 
 test.describe("edge proxy", () => {
-  test("health endpoint responds", async ({ request }) => {
+  test("health endpoint responds", { tag: "@smoke" }, async ({ request }) => {
     const res = await request.get("/healthz");
     expect(res.status()).toBe(200);
     expect((await res.text()).trim()).toBe("ok");
   });
 
-  test("security headers are present on HTTPS responses", async ({ request }) => {
-    const res = await request.get("/healthz");
-    const headers = res.headers();
+  test(
+    "security headers are present on HTTPS responses",
+    { tag: "@smoke" },
+    async ({ request }) => {
+      const res = await request.get("/healthz");
+      const headers = res.headers();
 
-    expect(headers["strict-transport-security"]).toContain("max-age=");
-    expect(headers["x-content-type-options"]).toBe("nosniff");
-    expect(headers["x-frame-options"]).toBe("DENY");
-    expect(headers["referrer-policy"]).toBe("strict-origin-when-cross-origin");
-    expect(headers["permissions-policy"]).toBeTruthy();
-    expect(headers["content-security-policy"]).toContain("frame-ancestors 'none'");
-  });
+      expect(headers["strict-transport-security"]).toContain("max-age=");
+      expect(headers["x-content-type-options"]).toBe("nosniff");
+      expect(headers["x-frame-options"]).toBe("DENY");
+      expect(headers["referrer-policy"]).toBe("strict-origin-when-cross-origin");
+      expect(headers["permissions-policy"]).toBeTruthy();
+      expect(headers["content-security-policy"]).toContain("frame-ancestors 'none'");
+    },
+  );
 
   test("server version is not disclosed", async ({ request }) => {
     const res = await request.get("/healthz");

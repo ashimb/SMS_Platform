@@ -77,6 +77,7 @@ export function LoginPage() {
               type="email"
               inputMode="email"
               autoComplete="username"
+              enterKeyHint="next"
               autoCapitalize="none"
               spellCheck={false}
               disabled={isSubmitting}
@@ -90,6 +91,7 @@ export function LoginPage() {
           >
             <PasswordInput
               autoComplete="current-password"
+              enterKeyHint="go"
               disabled={isSubmitting}
               {...register("password")}
             />
@@ -97,7 +99,7 @@ export function LoginPage() {
           <div className="-mt-2 flex justify-end">
             <Link
               to={ROUTES.forgotPassword}
-              className="rounded text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+              className="inline-flex min-h-11 items-center rounded text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
             >
               {t("login.forgot")}
             </Link>

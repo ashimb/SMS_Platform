@@ -25,7 +25,7 @@ export function useStudentColumns() {
         cell: (info) => (
           <Link
             to={ROUTES.student(info.row.original.id)}
-            className="flex items-center gap-3 rounded font-medium text-fg hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+            className="flex min-h-11 items-center gap-3 rounded font-medium text-fg hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none md:pointer-fine:min-h-0"
           >
             <Avatar name={info.getValue()} size="sm" />
             <span className="truncate">{info.getValue()}</span>

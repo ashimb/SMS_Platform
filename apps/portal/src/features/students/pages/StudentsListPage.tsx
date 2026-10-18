@@ -125,6 +125,12 @@ export function StudentsListPage() {
           ) : undefined
         }
         empty={empty}
+        mobile={{
+          primary: "name",
+          secondary: ["class", "status"],
+          showDetailsLabel: t("list.showDetails"),
+          hideDetailsLabel: t("list.hideDetails"),
+        }}
         {...(data
           ? {
               pagination: {

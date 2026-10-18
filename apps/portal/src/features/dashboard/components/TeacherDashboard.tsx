@@ -1,4 +1,4 @@
-import { Badge, Button, StatCard } from "@school-platform/ui";
+import { Badge, Button, StatCard, StatCardGrid } from "@school-platform/ui";
 import { BookOpen, CalendarCheck, ClipboardCheck, MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -121,7 +121,7 @@ export function TeacherDashboard() {
         </section>
       ) : null}
 
-      <section aria-label={t("admin.keyFigures")} className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+      <StatCardGrid role="region" aria-label={t("admin.keyFigures")} className="@3xl:grid-cols-3">
         <StatCard
           label={t("teacher.classesToday")}
           value={formatNumber(data.today.length, locale)}
@@ -137,7 +137,7 @@ export function TeacherDashboard() {
           value={formatNumber(data.unread_messages, locale)}
           icon={<MessageSquare />}
         />
-      </section>
+      </StatCardGrid>
 
       <div className="grid gap-6 lg:grid-cols-3">
         <Panel

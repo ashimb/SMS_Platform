@@ -1,15 +1,25 @@
 {
   "compilerOptions": {
     "target": "ES2023",
+    "lib": ["ES2023", "DOM"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noImplicitOverride": true,
     "exactOptionalPropertyTypes": true,
     "skipLibCheck": true,
     "types": ["node"],
     "noEmit": true
   },
-  "include": ["playwright.config.ts", "tests/**/*.ts"]
+  "include": [
+    "playwright.config.ts",
+    "global-setup.ts",
+    "fixtures/**/*.ts",
+    "pages/**/*.ts",
+    "helpers/**/*.ts",
+    "tests/**/*.ts"
+  ]
 }

@@ -2,7 +2,9 @@
  * 14-day attendance trend (recharts). Loaded lazily so teacher/parent dashboards and the sign-in
  * page never download the chart library. The same data is available to screen readers as a table.
  */
-import { useId } from "react";
+import { Button } from "@school-platform/ui";
+import { ChartColumn, Table2 } from "lucide-react";
+import { useId, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Area,
@@ -22,13 +24,27 @@ import { useLocale } from "./DashboardParts.tsx";
 export function AttendanceTrendChart({ data }: { data: AdminDashboardData["attendance_trend"] }) {
   const { t } = useTranslation("dashboard");
   const locale = useLocale();
+  const [asTable, setAsTable] = useState(false);
   const gradientId = useId().replaceAll(":", "");
   const short = (date: string) => formatDate(date, locale).split(" ").slice(0, 2).join(" ");
 
   return (
     <figure className="m-0">
       <figcaption className="sr-only">{t("admin.trendCaption")}</figcaption>
-      <div className="h-64" aria-hidden="true">
+      <div className="mb-2 flex justify-end">
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={() => {
+            setAsTable((value) => !value);
+          }}
+        >
+          {asTable ? <ChartColumn aria-hidden="true" /> : <Table2 aria-hidden="true" />}
+          {asTable ? t("admin.viewAsChart") : t("admin.viewAsTable")}
+        </Button>
+      </div>
+      <div className={asTable ? "hidden" : "h-56 sm:h-64"} aria-hidden="true">
         <ResponsiveContainer
           width="100%"
           height="100%"
@@ -56,7 +72,7 @@ export function AttendanceTrendChart({ data }: { data: AdminDashboardData["atten
               tick={{ fill: "var(--sp-fg-subtle)", fontSize: 12 }}
               axisLine={false}
               tickLine={false}
-              width={48}
+              width={44}
             />
             <Tooltip
               cursor={{ stroke: "var(--sp-border-strong)" }}
@@ -81,7 +97,13 @@ export function AttendanceTrendChart({ data }: { data: AdminDashboardData["atten
           </AreaChart>
         </ResponsiveContainer>
       </div>
-      <table className="sr-only">
+      <table
+        className={
+          asTable
+            ? "max-h-72 w-full overflow-y-auto text-sm [&_td]:border-t [&_td]:border-border [&_td]:py-2 [&_th]:py-2 [&_th]:text-left [&_th]:font-medium"
+            : "sr-only"
+        }
+      >
         <caption>{t("admin.trendCaption")}</caption>
         <thead>
           <tr>

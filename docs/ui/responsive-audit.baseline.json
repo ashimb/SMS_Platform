@@ -1,0 +1,3827 @@
+{
+  "generated": "2026-10-18T13:16:24.211Z",
+  "measurements": 812,
+  "entries": [
+    {
+      "key": "website /||target||a.flex.items-center | button.relative.inline-flex | a.relative.inline-flex",
+      "screen": "website /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.relative.inline-flex",
+      "detail": "18 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.relative.inline-flex \"All notices\" 124x40",
+        "a.relative.inline-flex \"All events\" 120x40"
+      ],
+      "viewports": ["375", "320", "414"]
+    },
+    {
+      "key": "website /||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["375", "768", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["375", "768", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /about||target||a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "screen": "website /about",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "detail": "15 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19",
+        "a.underline-offset-4.hover:text-white \"Instagram (opens in a new ta\" 62x19"
+      ],
+      "viewports": ["375", "320", "414"]
+    },
+    {
+      "key": "website /about||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /about",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["375", "320", "414", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /about||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /about",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["375", "320", "414", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /about||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /about",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /admissions||target||a.flex.items-center | button.relative.inline-flex | input#field-_R_arlfiutb_.w-full.rounded-md",
+      "screen": "website /admissions",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | input#field-_R_arlfiutb_.w-full.rounded-md",
+      "detail": "21 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "input#field-_R_arlfiutb_.w-full.rounded-md 238x40",
+        "input#field-_R_irlfiutb_.w-full.rounded-md 238x40"
+      ],
+      "viewports": ["320", "414", "375"]
+    },
+    {
+      "key": "website /admissions||input||input#field-_R_arlfiutb_.w-full.rounded-md 14px",
+      "screen": "website /admissions",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_R_arlfiutb_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": [
+        "input#field-_R_arlfiutb_.w-full.rounded-md 14px",
+        "input#field-_R_irlfiutb_.w-full.rounded-md 14px"
+      ],
+      "viewports": ["320", "414", "375", "375L"]
+    },
+    {
+      "key": "website /admissions||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /admissions",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["320", "414", "375", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /admissions||overlap||p \"Classes Nursery to II have a\" x h2#enquiry-title.text-2xl.font-semibold \"Send an enquir",
+      "screen": "website /admissions",
+      "kind": "overlap",
+      "severity": "Medium",
+      "sig": "p \"Classes Nursery to II have a\" x h2#enquiry-title.text-2xl.font-semibold \"Send an enquir",
+      "detail": "overlapping text",
+      "items": [
+        "p \"Classes Nursery to II have a\" x h2#enquiry-title.text-2xl.font-semibold \"Send an enquiry\""
+      ],
+      "viewports": ["320"]
+    },
+    {
+      "key": "website /admissions||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /admissions",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["320", "414", "375", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /admissions||overlap||p \"A birth certificate, the pre\" x p \"Classes Nursery to II have a\"",
+      "screen": "website /admissions",
+      "kind": "overlap",
+      "severity": "Medium",
+      "sig": "p \"A birth certificate, the pre\" x p \"Classes Nursery to II have a\"",
+      "detail": "overlapping text",
+      "items": ["p \"A birth certificate, the pre\" x p \"Classes Nursery to II have a\""],
+      "viewports": ["375"]
+    },
+    {
+      "key": "website /admissions||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /admissions",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "23 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /notices||target||a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "screen": "website /notices",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "detail": "15 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19",
+        "a.underline-offset-4.hover:text-white \"Instagram (opens in a new ta\" 62x19"
+      ],
+      "viewports": ["320", "414", "375"]
+    },
+    {
+      "key": "website /notices||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /notices",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["320", "768", "414", "375", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /notices||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /notices",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["320", "768", "414", "375", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /notices||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /notices",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /notices/diwali-holidays||target||a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:underline",
+      "screen": "website /notices/diwali-holidays",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:underline",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:underline \"Notices\" 47x20",
+        "a.mt-12.inline-flex \"All notices\" 99x24"
+      ],
+      "viewports": ["414", "320", "375"]
+    },
+    {
+      "key": "website /notices/diwali-holidays||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /notices/diwali-holidays",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["414", "320", "375", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /notices/diwali-holidays||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /notices/diwali-holidays",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["414", "320", "375", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /notices/diwali-holidays||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /notices/diwali-holidays",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "19 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /events||target||a.flex.items-center | button.relative.inline-flex | a.relative.inline-flex",
+      "screen": "website /events",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.relative.inline-flex \"All events\" 120x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19"
+      ],
+      "viewports": ["320", "375", "414"]
+    },
+    {
+      "key": "website /events||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /events",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["320", "375", "414", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /events||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /events",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["320", "375", "414", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /events||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /events",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "18 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /events/annual-day-2026||target||a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:underline",
+      "screen": "website /events/annual-day-2026",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:underline",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:underline \"Events\" 40x20",
+        "a.mt-12.inline-flex \"All events\" 95x24"
+      ],
+      "viewports": ["414", "320", "375"]
+    },
+    {
+      "key": "website /events/annual-day-2026||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /events/annual-day-2026",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["414", "320", "375", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /events/annual-day-2026||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /events/annual-day-2026",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["414", "320", "375", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /events/annual-day-2026||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /events/annual-day-2026",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "19 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /gallery||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /gallery",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /gallery||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /gallery",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["768", "414", "375", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /gallery||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /gallery",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["768", "414", "375", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /gallery||target||a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "screen": "website /gallery",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "detail": "15 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19",
+        "a.underline-offset-4.hover:text-white \"Instagram (opens in a new ta\" 62x19"
+      ],
+      "viewports": ["414", "375", "320"]
+    },
+    {
+      "key": "website /contact||target||a.flex.items-center | button.relative.inline-flex | a.text-primary-subtle-fg.underline",
+      "screen": "website /contact",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.text-primary-subtle-fg.underline",
+      "detail": "18 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.text-primary-subtle-fg.underline \"+91 80 4000 1234\" 144x24",
+        "a.text-primary-subtle-fg.underline \"office@greenvalley.example.c\" 260x24"
+      ],
+      "viewports": ["375", "320", "414"]
+    },
+    {
+      "key": "website /contact||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /contact",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["375", "320", "414", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /contact||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /contact",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["375", "320", "414", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /contact||overflow||section",
+      "screen": "website /contact",
+      "kind": "overflow",
+      "severity": "High",
+      "sig": "section",
+      "detail": "page scrolls horizontally by 16px",
+      "items": [
+        "section \"Get in touchAddress12 Orchar\"",
+        "h2#contact-details.text-2xl.font-semibold \"Get in touch\"",
+        "dl.mt-6.space-y-6 \"Address12 Orchard Road, Sect\""
+      ],
+      "viewports": ["320"]
+    },
+    {
+      "key": "website /contact||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /contact",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /facilities||target||a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "screen": "website /facilities",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "detail": "15 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19",
+        "a.underline-offset-4.hover:text-white \"Instagram (opens in a new ta\" 62x19"
+      ],
+      "viewports": ["320", "414", "375"]
+    },
+    {
+      "key": "website /facilities||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /facilities",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["320", "414", "375", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /facilities||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /facilities",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["320", "414", "375", "768", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /facilities||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /facilities",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /privacy-policy||target||a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "screen": "website /privacy-policy",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "detail": "15 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19",
+        "a.underline-offset-4.hover:text-white \"Instagram (opens in a new ta\" 62x19"
+      ],
+      "viewports": ["320", "375", "414"]
+    },
+    {
+      "key": "website /privacy-policy||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /privacy-policy",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["320", "375", "768", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /privacy-policy||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /privacy-policy",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["320", "375", "768", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /privacy-policy||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /privacy-policy",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /this-page-does-not-exist||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website /this-page-does-not-exist",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website /this-page-does-not-exist||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website /this-page-does-not-exist",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["768", "375", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /this-page-does-not-exist||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website /this-page-does-not-exist",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["768", "375", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /this-page-does-not-exist||target||a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "screen": "website /this-page-does-not-exist",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.underline-offset-4.hover:text-white",
+      "detail": "15 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19",
+        "a.underline-offset-4.hover:text-white \"Instagram (opens in a new ta\" 62x19"
+      ],
+      "viewports": ["375", "320", "414"]
+    },
+    {
+      "key": "website mobile menu (open)||target||a.flex.items-center | button.relative.inline-flex | a.relative.inline-flex",
+      "screen": "website mobile menu (open)",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | a.relative.inline-flex",
+      "detail": "21 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.relative.inline-flex \"All notices\" 124x40",
+        "a.relative.inline-flex \"All events\" 120x40"
+      ],
+      "viewports": ["375", "320", "414"]
+    },
+    {
+      "key": "website mobile menu (open)||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website mobile menu (open)",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+        "div.fixed.inset-0 (top)",
+        "div.fixed.z-50 \"MenuAboutAdmissionsNoticesEv\" (top)"
+      ],
+      "viewports": ["375", "768", "320", "414", "375L", "414L"]
+    },
+    {
+      "key": "website mobile menu (open)||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website mobile menu (open)",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["375", "768", "320", "414", "375L", "414L"]
+    },
+    {
+      "key": "website mobile menu (open)||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website mobile menu (open)",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "23 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||target||a.flex.items-center | button.relative.inline-flex | input#field-_R_arlfiutb_.w-full.rounded-md",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | button.relative.inline-flex | input#field-_R_arlfiutb_.w-full.rounded-md",
+      "detail": "21 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 36x36",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "input#field-_R_arlfiutb_.w-full.rounded-md 293x40",
+        "input#field-_R_irlfiutb_.w-full.rounded-md 293x40"
+      ],
+      "viewports": ["375", "414", "320"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||input||input#field-_R_arlfiutb_.w-full.rounded-md 14px",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_R_arlfiutb_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": [
+        "input#field-_R_arlfiutb_.w-full.rounded-md 14px",
+        "input#field-_R_irlfiutb_.w-full.rounded-md 14px"
+      ],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||safe-area||header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"Green ValleyAboutAdmissionsN\" (top)"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||overlap||p \"A birth certificate, the pre\" x p \"Classes Nursery to II have a\"",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "overlap",
+      "severity": "Medium",
+      "sig": "p \"A birth certificate, the pre\" x p \"Classes Nursery to II have a\"",
+      "detail": "overlapping text",
+      "items": ["p \"A birth certificate, the pre\" x p \"Classes Nursery to II have a\""],
+      "viewports": ["375"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||meta||viewport meta: width=device-width, initial-scale=1",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "meta",
+      "severity": "Medium",
+      "sig": "viewport meta: width=device-width, initial-scale=1",
+      "detail": "viewport meta: width=device-width, initial-scale=1",
+      "items": [],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||target||a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | a.relative.shrink-0",
+      "detail": "23 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Parent & staff login\" 147x32",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40"
+      ],
+      "viewports": ["768", "414L"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||overlap||p \"Classes Nursery to II have a\" x h2#enquiry-title.text-2xl.font-semibold \"Send an enquir",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "overlap",
+      "severity": "Medium",
+      "sig": "p \"Classes Nursery to II have a\" x h2#enquiry-title.text-2xl.font-semibold \"Send an enquir",
+      "detail": "overlapping text",
+      "items": [
+        "p \"Classes Nursery to II have a\" x h2#enquiry-title.text-2xl.font-semibold \"Send an enquiry\""
+      ],
+      "viewports": ["320"]
+    },
+    {
+      "key": "portal /login||target||button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | input#field-_r_0_.w-full.rounded-md",
+      "screen": "portal /login",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | input#field-_r_0_.w-full.rounded-md",
+      "detail": "6 target(s) under 44px",
+      "items": [
+        "button.rounded-md.px-2.5 \"English\" 70x32",
+        "button.rounded-md.px-2.5 \"বাংলা\" 52x32",
+        "input#field-_r_0_.w-full.rounded-md 335x40",
+        "input#field-_r_1_.w-full.rounded-md 335x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "portal /login||input||input#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "portal /login",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": [
+        "input#field-_r_0_.w-full.rounded-md 14px",
+        "input#field-_r_1_.w-full.rounded-md 14px"
+      ],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal /forgot-password||target||button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | input#field-_r_0_.w-full.rounded-md",
+      "screen": "portal /forgot-password",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | input#field-_r_0_.w-full.rounded-md",
+      "detail": "4 target(s) under 44px",
+      "items": [
+        "button.rounded-md.px-2.5 \"English\" 70x32",
+        "button.rounded-md.px-2.5 \"বাংলা\" 52x32",
+        "input#field-_r_0_.w-full.rounded-md 335x40",
+        "a.mx-auto.flex \"Back to sign in\" 117x20"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "portal /forgot-password||input||input#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "portal /forgot-password",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal /reset-password||target||button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | a.mx-auto.flex",
+      "screen": "portal /reset-password",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | a.mx-auto.flex",
+      "detail": "3 target(s) under 44px",
+      "items": [
+        "button.rounded-md.px-2.5 \"English\" 70x32",
+        "button.rounded-md.px-2.5 \"বাংলা\" 52x32",
+        "a.mx-auto.flex \"Back to sign in\" 117x20"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "portal /login/mfa||target||button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | a.mx-auto.flex",
+      "screen": "portal /login/mfa",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | a.mx-auto.flex",
+      "detail": "3 target(s) under 44px",
+      "items": [
+        "button.rounded-md.px-2.5 \"English\" 70x32",
+        "button.rounded-md.px-2.5 \"বাংলা\" 52x32",
+        "a.mx-auto.flex \"Back to sign in\" 117x20"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "414L"]
+    },
+    {
+      "key": "portal /login (error state)||target||button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | input#field-_r_0_.w-full.rounded-md",
+      "screen": "portal /login (error state)",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.rounded-md.px-2.5 | button.rounded-md.px-2.5 | input#field-_r_0_.w-full.rounded-md",
+      "detail": "6 target(s) under 44px",
+      "items": [
+        "button.rounded-md.px-2.5 \"English\" 70x32",
+        "button.rounded-md.px-2.5 \"বাংলা\" 52x32",
+        "input#field-_r_0_.w-full.rounded-md 335x40",
+        "input#field-_r_1_.w-full.rounded-md 335x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "portal /login (error state)||input||input#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "portal /login (error state)",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": [
+        "input#field-_r_0_.w-full.rounded-md 14px",
+        "input#field-_r_1_.w-full.rounded-md 14px"
+      ],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal admin /||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /students||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /students",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "10 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /students||input||input#_r_h_.w-full.rounded-md 14px",
+      "screen": "portal admin /students",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#_r_h_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#_r_h_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal admin /students||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "screen": "portal admin /students",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "portal admin /students||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /students",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /students||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "screen": "portal admin /students",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "portal admin /students||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "screen": "portal admin /students",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "portal admin /students/new||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /students/new",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /students/new||input||input#field-_r_q_.w-full.rounded-md 14px",
+      "screen": "portal admin /students/new",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_q_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": [
+        "input#field-_r_q_.w-full.rounded-md 14px",
+        "input#field-_r_r_.w-full.rounded-md 14px"
+      ],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal admin /students/new||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /students/new",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /students/:id||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /students/:id",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "6 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /students/:id||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /students/:id",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /students/:id/edit||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /students/:id/edit",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /students/:id/edit||input||input#field-_r_18_.w-full.rounded-md 14px",
+      "screen": "portal admin /students/:id/edit",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_18_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": [
+        "input#field-_r_18_.w-full.rounded-md 14px",
+        "input#field-_r_19_.w-full.rounded-md 14px"
+      ],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal admin /students/:id/edit||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /students/:id/edit",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /guardians||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /guardians",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /guardians||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /guardians",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /staff||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /staff",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /staff||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /staff",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /academics||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /academics",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /academics||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /academics",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /timetable||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /timetable",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /timetable||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /timetable",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /attendance||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /attendance",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /attendance||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /attendance",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /exams||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /exams",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /exams||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /exams",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /admissions||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /admissions",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /admissions||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /admissions",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /fees||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /fees",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /fees||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /fees",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /communication||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /communication",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /communication||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /communication",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /cms||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /cms",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /cms||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /cms",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /reports||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /reports",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /reports||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /reports",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /settings||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /settings",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /settings||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /settings",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /audit||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /audit",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /audit||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /audit",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /403||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /403",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "6 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /403||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /403",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /does-not-exist||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin /does-not-exist",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "6 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin /does-not-exist||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /does-not-exist",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin overlay: More sheet||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin overlay: More sheet",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "26 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin overlay: More sheet||input||input#_r_1m_.w-full.rounded-md 14px",
+      "screen": "portal admin overlay: More sheet",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#_r_1m_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#_r_1m_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal admin overlay: More sheet||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "screen": "portal admin overlay: More sheet",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "portal admin overlay: More sheet||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin overlay: More sheet",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)",
+        "div.fixed.inset-0 (top)"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin overlay: More sheet||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "screen": "portal admin overlay: More sheet",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "portal admin overlay: More sheet||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "screen": "portal admin overlay: More sheet",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "portal admin overlay: account menu||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin overlay: account menu",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "13 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin overlay: account menu||input||input#_r_1m_.w-full.rounded-md 14px",
+      "screen": "portal admin overlay: account menu",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#_r_1m_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#_r_1m_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal admin overlay: account menu||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "screen": "portal admin overlay: account menu",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "portal admin overlay: account menu||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin overlay: account menu",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)",
+        "div \"School Administratoradmin@gr\" (top)"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin overlay: account menu||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "screen": "portal admin overlay: account menu",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "portal admin overlay: account menu||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "screen": "portal admin overlay: account menu",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "portal admin overlay: command palette||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal admin overlay: command palette",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "11 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"SAAccount menu for School Ad\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin overlay: command palette||input||input#_r_1m_.w-full.rounded-md 14px",
+      "screen": "portal admin overlay: command palette",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#_r_1m_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": [
+        "input#_r_1m_.w-full.rounded-md 14px",
+        "input.h-11.w-full \"Search sections\" 14px"
+      ],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal admin overlay: command palette||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "screen": "portal admin overlay: command palette",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "portal admin overlay: command palette||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin overlay: command palette",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)",
+        "div.fixed.inset-0 (top)"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal admin overlay: command palette||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "screen": "portal admin overlay: command palette",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "portal admin overlay: command palette||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "screen": "portal admin overlay: command palette",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "portal teacher /||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal teacher /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"TTAccount menu for Tara Teac\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /students||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal teacher /students",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "9 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"TTAccount menu for Tara Teac\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /students||input||input#_r_h_.w-full.rounded-md 14px",
+      "screen": "portal teacher /students",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#_r_h_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#_r_h_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "portal teacher /students||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "screen": "portal teacher /students",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 341"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "portal teacher /students||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /students",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /attendance||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal teacher /attendance",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"TTAccount menu for Tara Teac\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /attendance||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /attendance",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /timetable||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal teacher /timetable",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"TTAccount menu for Tara Teac\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /timetable||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /timetable",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /students||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "screen": "portal teacher /students",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 380"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "portal teacher /students||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "screen": "portal teacher /students",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 605 in 286"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "portal teacher /exams||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal teacher /exams",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"TTAccount menu for Tara Teac\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /exams||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /exams",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /communication||target||a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "screen": "portal teacher /communication",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | button.ml-auto.flex | button.relative.inline-flex",
+      "detail": "5 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "button.ml-auto.flex \"SearchSearchCtrl K\" 42x40",
+        "button.relative.inline-flex \"Change appearance (current: \" 40x40",
+        "button.relative.inline-flex \"TTAccount menu for Tara Teac\" 44x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal teacher /communication||safe-area||header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /communication",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["header.sticky.top-0 \"GVGreen Valley Public School\" (top)"],
+      "viewports": ["375", "768", "414", "320", "375L", "414L"]
+    },
+    {
+      "key": "portal parent /||target||button.relative.inline-flex",
+      "screen": "portal parent /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Sign out\" 112x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Actions/Button / Primary||target||button.relative.inline-flex",
+      "screen": "ui Actions/Button / Primary",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Save changes\" 121x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Actions/Button / Secondary||target||button.relative.inline-flex",
+      "screen": "ui Actions/Button / Secondary",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Save changes\" 123x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Actions/Button / Danger||target||button.relative.inline-flex",
+      "screen": "ui Actions/Button / Danger",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Cancel receipt\" 125x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Actions/Button / Loading||target||button.relative.inline-flex",
+      "screen": "ui Actions/Button / Loading",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Paying ₹18,500Loading\" 156x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Actions/Button / Disabled||target||button.relative.inline-flex",
+      "screen": "ui Actions/Button / Disabled",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Save changes\" 121x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Actions/Button / All Variants||target||button.relative.inline-flex | button.relative.inline-flex | button.relative.inline-flex",
+      "screen": "ui Actions/Button / All Variants",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex | button.relative.inline-flex | button.relative.inline-flex",
+      "detail": "7 target(s) under 44px",
+      "items": [
+        "button.relative.inline-flex \"Add student\" 136x40",
+        "button.relative.inline-flex \"Export\" 77x40",
+        "button.relative.inline-flex \"Skip\" 59x40",
+        "button.relative.inline-flex \"Delete\" 75x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Layout/Card / Default||target||button.relative.inline-flex | button.relative.inline-flex",
+      "screen": "ui Layout/Card / Default",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex | button.relative.inline-flex",
+      "detail": "2 target(s) under 44px",
+      "items": [
+        "button.relative.inline-flex \"View breakdown\" 142x40",
+        "button.relative.inline-flex \"Pay now\" 87x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Checkbox / Default||target||button#checkbox-_r_0_.peer.grid",
+      "screen": "ui Forms/Checkbox / Default",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#checkbox-_r_0_.peer.grid",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#checkbox-_r_0_.peer.grid 20x20"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Checkbox / Checked||target||button#checkbox-_r_0_.peer.grid",
+      "screen": "ui Forms/Checkbox / Checked",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#checkbox-_r_0_.peer.grid",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#checkbox-_r_0_.peer.grid 20x20"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Checkbox / Indeterminate||target||button#checkbox-_r_0_.peer.grid",
+      "screen": "ui Forms/Checkbox / Indeterminate",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#checkbox-_r_0_.peer.grid",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#checkbox-_r_0_.peer.grid 20x20"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Checkbox / Disabled||target||button#checkbox-_r_0_.peer.grid",
+      "screen": "ui Forms/Checkbox / Disabled",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#checkbox-_r_0_.peer.grid",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#checkbox-_r_0_.peer.grid 20x20"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Default||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 325",
+      "screen": "ui Data display/DataTable / Default",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 325",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 325"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "ui Data display/DataTable / Default||safe-area||thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)",
+      "screen": "ui Data display/DataTable / Default",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Loading||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325",
+      "screen": "ui Data display/DataTable / Loading",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "ui Data display/DataTable / Loading||safe-area||thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)",
+      "screen": "ui Data display/DataTable / Loading",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Empty||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325",
+      "screen": "ui Data display/DataTable / Empty",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "ui Data display/DataTable / Empty||safe-area||thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)",
+      "screen": "ui Data display/DataTable / Empty",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Error||target||button.relative.inline-flex",
+      "screen": "ui Data display/DataTable / Error",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Retry\" 61x32"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Error||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325",
+      "screen": "ui Data display/DataTable / Error",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 325"],
+      "viewports": ["375"]
+    },
+    {
+      "key": "ui Data display/DataTable / Error||safe-area||thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)",
+      "screen": "ui Data display/DataTable / Error",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": ["thead.sticky.top-0 \"NameAdmission no.SectionAtte\" (top)"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Default||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 364",
+      "screen": "ui Data display/DataTable / Default",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 364",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 364"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "ui Data display/DataTable / Default||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 270",
+      "screen": "ui Data display/DataTable / Default",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 270",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 547 in 270"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "ui Overlays/Dialog / Confirmation||target||button.relative.inline-flex",
+      "screen": "ui Overlays/Dialog / Confirmation",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Publish results\" 128x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Loading||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364",
+      "screen": "ui Data display/DataTable / Loading",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "ui Data display/DataTable / Loading||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270",
+      "screen": "ui Data display/DataTable / Loading",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "ui Overlays/Dialog / Open By Default||target||button.relative.inline-flex | button.relative.inline-flex | button.relative.inline-flex",
+      "screen": "ui Overlays/Dialog / Open By Default",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex | button.relative.inline-flex | button.relative.inline-flex",
+      "detail": "4 target(s) under 44px",
+      "items": [
+        "button.relative.inline-flex \"Publish results\" 128x40",
+        "button.relative.inline-flex \"Cancel\" 293x40",
+        "button.relative.inline-flex \"Publish to 84 families\" 293x40",
+        "button.absolute.top-4 \"Close\" 32x32"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Overlays/Dialog / Open By Default||safe-area||div.fixed.inset-0 (top)",
+      "screen": "ui Overlays/Dialog / Open By Default",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "div.fixed.inset-0 (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "div.fixed.inset-0 (top)",
+        "div.fixed.top-1/2 \"Publish results for VII-A an\" (top)"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Empty||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364",
+      "screen": "ui Data display/DataTable / Empty",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "ui Data display/DataTable / Empty||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270",
+      "screen": "ui Data display/DataTable / Empty",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "ui Overlays/DropdownMenu / Row Actions||target||button.relative.inline-flex",
+      "screen": "ui Overlays/DropdownMenu / Row Actions",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Actions for Aarav Sharma\" 40x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Error||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364",
+      "screen": "ui Data display/DataTable / Error",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 364"],
+      "viewports": ["414"]
+    },
+    {
+      "key": "ui Data display/DataTable / Error||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270",
+      "screen": "ui Data display/DataTable / Error",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 477 in 270"],
+      "viewports": ["320"]
+    },
+    {
+      "key": "ui Feedback/EmptyState / Empty||target||button.relative.inline-flex",
+      "screen": "ui Feedback/EmptyState / Empty",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Post homework\" 135x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Feedback/EmptyState / Error||target||button.relative.inline-flex",
+      "screen": "ui Feedback/EmptyState / Error",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Retry\" 69x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/FormField / With Hint||target||input#field-_r_0_.w-full.rounded-md",
+      "screen": "ui Forms/FormField / With Hint",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "input#field-_r_0_.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 327x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/FormField / With Hint||input||input#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "ui Forms/FormField / With Hint",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Forms/FormField / Required With Error||target||input#field-_r_0_.w-full.rounded-md",
+      "screen": "ui Forms/FormField / Required With Error",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "input#field-_r_0_.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 327x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/FormField / Required With Error||input||input#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "ui Forms/FormField / Required With Error",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Forms/FormField / Disabled||target||input#field-_r_0_.w-full.rounded-md",
+      "screen": "ui Forms/FormField / Disabled",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "input#field-_r_0_.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 327x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/FormField / Disabled||input||input#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "ui Forms/FormField / Disabled",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Forms/Input / Default||target||input#field-_r_0_.w-full.rounded-md",
+      "screen": "ui Forms/Input / Default",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "input#field-_r_0_.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 327x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Input / Default||input||input#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "ui Forms/Input / Default",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Forms/Input / With Icon||target||input.w-full.rounded-md",
+      "screen": "ui Forms/Input / With Icon",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "input.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["input.w-full.rounded-md \"Search students\" 327x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Input / With Icon||input||input.w-full.rounded-md \"Search students\" 14px",
+      "screen": "ui Forms/Input / With Icon",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input.w-full.rounded-md \"Search students\" 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input.w-full.rounded-md \"Search students\" 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Forms/Input / Invalid||target||input#field-_r_0_.w-full.rounded-md",
+      "screen": "ui Forms/Input / Invalid",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "input#field-_r_0_.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 327x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Input / Invalid||input||input#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "ui Forms/Input / Invalid",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input#field-_r_0_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Forms/Input / Disabled||target||input.w-full.rounded-md",
+      "screen": "ui Forms/Input / Disabled",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "input.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["input.w-full.rounded-md \"Admission number\" 327x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Input / Disabled||input||input.w-full.rounded-md \"Admission number\" 14px",
+      "screen": "ui Forms/Input / Disabled",
+      "kind": "input",
+      "severity": "High",
+      "sig": "input.w-full.rounded-md \"Admission number\" 14px",
+      "detail": "input font-size under 16px",
+      "items": ["input.w-full.rounded-md \"Admission number\" 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Layout/PageHeader / Default||target||button.relative.inline-flex | button.relative.inline-flex",
+      "screen": "ui Layout/PageHeader / Default",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex | button.relative.inline-flex",
+      "detail": "2 target(s) under 44px",
+      "items": [
+        "button.relative.inline-flex \"Import\" 104x40",
+        "button.relative.inline-flex \"Add student\" 136x40"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Select / Default||target||button#field-_r_0_.w-full.rounded-md",
+      "screen": "ui Forms/Select / Default",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#field-_r_0_.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#field-_r_0_.w-full.rounded-md \"Choose a class\" 320x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Select / Invalid||target||button#field-_r_0_.w-full.rounded-md",
+      "screen": "ui Forms/Select / Invalid",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#field-_r_0_.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#field-_r_0_.w-full.rounded-md \"Choose a class\" 320x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Select / Disabled||target||button.w-full.rounded-md",
+      "screen": "ui Forms/Select / Disabled",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.w-full.rounded-md",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.w-full.rounded-md \"Class\" 327x40"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Overlays/Sheet / Right||target||button.relative.inline-flex",
+      "screen": "ui Overlays/Sheet / Right",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Filters\" 74x40"],
+      "viewports": ["375", "768", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Overlays/Sheet / Bottom On Mobile||target||button.relative.inline-flex",
+      "screen": "ui Overlays/Sheet / Bottom On Mobile",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Filters\" 74x40"],
+      "viewports": ["375", "768", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Switch / Off||target||button#switch-_r_0_.relative.inline-flex",
+      "screen": "ui Forms/Switch / Off",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#switch-_r_0_.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#switch-_r_0_.relative.inline-flex 44x24"],
+      "viewports": ["375", "768", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Switch / On||target||button#switch-_r_0_.relative.inline-flex",
+      "screen": "ui Forms/Switch / On",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#switch-_r_0_.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#switch-_r_0_.relative.inline-flex 44x24"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Switch / Disabled||target||button#switch-_r_0_.relative.inline-flex",
+      "screen": "ui Forms/Switch / Disabled",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button#switch-_r_0_.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button#switch-_r_0_.relative.inline-flex 44x24"],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Navigation/Tabs / Student Profile||target||button.inline-flex.h-8 | button.inline-flex.h-8 | button.inline-flex.h-8",
+      "screen": "ui Navigation/Tabs / Student Profile",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.inline-flex.h-8 | button.inline-flex.h-8 | button.inline-flex.h-8",
+      "detail": "4 target(s) under 44px",
+      "items": [
+        "button.inline-flex.h-8 \"Overview\" 85x32",
+        "button.inline-flex.h-8 \"Attendance\" 99x32",
+        "button.inline-flex.h-8 \"Academics\" 94x32",
+        "button.inline-flex.h-8 \"Fees\" 54x32"
+      ],
+      "viewports": ["375", "768", "414", "320", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Forms/Textarea / With Counter||input||textarea#field-_r_0_.w-full.rounded-md 14px",
+      "screen": "ui Forms/Textarea / With Counter",
+      "kind": "input",
+      "severity": "High",
+      "sig": "textarea#field-_r_0_.w-full.rounded-md 14px",
+      "detail": "input font-size under 16px",
+      "items": ["textarea#field-_r_0_.w-full.rounded-md 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Forms/Textarea / Invalid||input||textarea#field-_r_0_.w-full.rounded-md \"Late\" 14px",
+      "screen": "ui Forms/Textarea / Invalid",
+      "kind": "input",
+      "severity": "High",
+      "sig": "textarea#field-_r_0_.w-full.rounded-md \"Late\" 14px",
+      "detail": "input font-size under 16px",
+      "items": ["textarea#field-_r_0_.w-full.rounded-md \"Late\" 14px"],
+      "viewports": ["375", "414", "320", "375L"]
+    },
+    {
+      "key": "ui Feedback/Toast / Variants||target||button.relative.inline-flex | button.relative.inline-flex | button.relative.inline-flex",
+      "screen": "ui Feedback/Toast / Variants",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex | button.relative.inline-flex | button.relative.inline-flex",
+      "detail": "4 target(s) under 44px",
+      "items": [
+        "button.relative.inline-flex \"Success\" 83x40",
+        "button.relative.inline-flex \"Info\" 61x40",
+        "button.relative.inline-flex \"Warning\" 90x40",
+        "button.relative.inline-flex \"Error\" 65x40"
+      ],
+      "viewports": ["375", "768", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "ui Overlays/Tooltip / On Icon Button||target||button.relative.inline-flex",
+      "screen": "ui Overlays/Tooltip / On Icon Button",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "button.relative.inline-flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["button.relative.inline-flex \"Export\" 40x40"],
+      "viewports": ["375", "768", "320", "414", "1024", "1440", "375L", "414L"]
+    },
+    {
+      "key": "website /||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "25 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /about||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /about",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /admissions||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /admissions",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "28 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /notices||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /notices",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "19 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.relative.inline-flex \"All notices\" 124x40"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /notices/diwali-holidays||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /notices/diwali-holidays",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "24 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /about||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /about",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /events||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /events",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "23 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /admissions||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /admissions",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "input#field-_R_arlfiutb_.w-full.rounded-md 267x40"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /events/annual-day-2026||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /events/annual-day-2026",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "24 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /notices||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /notices",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /gallery||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /gallery",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /notices/diwali-holidays||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /notices/diwali-holidays",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "18 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:underline \"Notices\" 47x20"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /contact||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /contact",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "25 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /events||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /events",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "17 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.relative.inline-flex \"All events\" 120x40"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /facilities||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /facilities",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /events/annual-day-2026||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /events/annual-day-2026",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "18 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:underline \"Events\" 40x20"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /privacy-policy||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /privacy-policy",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /gallery||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /gallery",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /this-page-does-not-exist||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website /this-page-does-not-exist",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /contact||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /contact",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "19 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.text-primary-subtle-fg.underline \"+91 80 4000 1234\" 144x24"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /facilities||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /facilities",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website /privacy-policy||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /privacy-policy",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||target||a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.rounded-md.px-3 | a.rounded-md.px-3",
+      "detail": "28 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.rounded-md.px-3 \"About\" 63x35",
+        "a.rounded-md.px-3 \"Admissions\" 96x35",
+        "a.rounded-md.px-3 \"Notices\" 72x35"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "website /this-page-does-not-exist||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website /this-page-does-not-exist",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.underline-offset-4.hover:text-white \"Facebook (opens in a new tab\" 59x19"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website mobile menu (open)||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website mobile menu (open)",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "a.relative.inline-flex \"All notices\" 124x40"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "website enquiry form (validation errors)||target||a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "screen": "website enquiry form (validation errors)",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.flex.items-center | a.relative.shrink-0 | button.relative.inline-flex",
+      "detail": "22 target(s) under 44px",
+      "items": [
+        "a.flex.items-center \"Green Valley Public School h\" 147x36",
+        "a.relative.shrink-0 \"Apply now\" 92x32",
+        "button.relative.inline-flex \"Open menu\" 40x40",
+        "input#field-_R_arlfiutb_.w-full.rounded-md 267x40"
+      ],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "portal /login/mfa||target||a.mx-auto.flex",
+      "screen": "portal /login/mfa",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.mx-auto.flex",
+      "detail": "1 target(s) under 44px",
+      "items": ["a.mx-auto.flex \"Back to sign in\" 117x20"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "portal admin /||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /students||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /students",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "25 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /students||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /students",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /students/new||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /students/new",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "31 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /students/new||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /students/new",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /students/:id||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /students/:id",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "21 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /students/:id||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /students/:id",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /students||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "screen": "portal admin /students",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "portal admin /students/:id/edit||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /students/:id/edit",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "31 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /students/:id/edit||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /students/:id/edit",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /guardians||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /guardians",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /guardians||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /guardians",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /staff||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /staff",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /staff||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /staff",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /academics||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /academics",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /academics||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /academics",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /timetable||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /timetable",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /timetable||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /timetable",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /attendance||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /attendance",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /attendance||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /attendance",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /exams||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /exams",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /exams||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /exams",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /admissions||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /admissions",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /admissions||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /admissions",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /fees||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /fees",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /fees||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /fees",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /communication||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /communication",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /communication||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /communication",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /cms||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /cms",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /cms||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /cms",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /reports||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /reports",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /reports||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /reports",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /settings||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /settings",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /settings||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /settings",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /audit||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /audit",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "20 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /audit||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /audit",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /403||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /403",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "21 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /403||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /403",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /does-not-exist||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin /does-not-exist",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "21 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin /does-not-exist||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin /does-not-exist",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin overlay: account menu||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin overlay: account menu",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "28 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin overlay: account menu||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin overlay: account menu",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin overlay: command palette||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal admin overlay: command palette",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "26 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Students\" 231x40",
+        "a.group.flex \"Guardians\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin overlay: command palette||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal admin overlay: command palette",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin overlay: More sheet||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "screen": "portal admin overlay: More sheet",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "portal teacher /||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal teacher /",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "12 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Attendance\" 231x40",
+        "a.group.flex \"Timetable\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin overlay: account menu||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "screen": "portal admin overlay: account menu",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "portal teacher /students||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal teacher /students",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "16 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Attendance\" 231x40",
+        "a.group.flex \"Timetable\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /students||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /students",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "thead.sticky.top-0 \"NameAdmission no.ClassStatus\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal admin overlay: command palette||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "screen": "portal admin overlay: command palette",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "portal teacher /attendance||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal teacher /attendance",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "12 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Attendance\" 231x40",
+        "a.group.flex \"Timetable\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /attendance||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /attendance",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /timetable||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal teacher /timetable",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "12 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Attendance\" 231x40",
+        "a.group.flex \"Timetable\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /timetable||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /timetable",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /students||table||table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "screen": "portal teacher /students",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"StudentsNameAdmission no.Cla\" width 617 in 617"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "portal teacher /exams||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal teacher /exams",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "12 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Attendance\" 231x40",
+        "a.group.flex \"Timetable\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /exams||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /exams",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /communication||target||a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "screen": "portal teacher /communication",
+      "kind": "target",
+      "severity": "Medium",
+      "sig": "a.sr-only.z-50 | a.group.flex | a.group.flex",
+      "detail": "12 target(s) under 44px",
+      "items": [
+        "a.sr-only.z-50 \"Skip to main content\" 32x16",
+        "a.group.flex \"Dashboard\" 231x40",
+        "a.group.flex \"Attendance\" 231x40",
+        "a.group.flex \"Timetable\" 231x40"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "portal teacher /communication||safe-area||aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "screen": "portal teacher /communication",
+      "kind": "safe-area",
+      "severity": "Medium",
+      "sig": "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+      "detail": "fixed/sticky bar without safe-area padding",
+      "items": [
+        "aside.sticky.top-0 \"GVGreen Valley Public School\" (top)",
+        "header.sticky.top-0 \"GVGreen Valley Public School\" (top)"
+      ],
+      "viewports": ["1024", "1440"]
+    },
+    {
+      "key": "ui Data display/DataTable / Default||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617",
+      "screen": "ui Data display/DataTable / Default",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Loading||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617",
+      "screen": "ui Data display/DataTable / Loading",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Empty||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617",
+      "screen": "ui Data display/DataTable / Empty",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617"],
+      "viewports": ["375L"]
+    },
+    {
+      "key": "ui Data display/DataTable / Error||table||table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617",
+      "screen": "ui Data display/DataTable / Error",
+      "kind": "table",
+      "severity": "High",
+      "sig": "table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617",
+      "detail": "table on a phone without a card treatment",
+      "items": ["table.w-full.border-collapse \"Students in VII-BNameAdmissi\" width 617 in 617"],
+      "viewports": ["375L"]
+    }
+  ]
+}

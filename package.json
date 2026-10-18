@@ -22,7 +22,9 @@
     "test": "npm run test:unit --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
     "test:e2e": "npm run test:e2e -w e2e",
-    "test:e2e:smoke": "npm run test:e2e -w e2e -- --project=smoke",
+    "test:e2e:smoke": "npm run test:e2e -w e2e -- --grep @smoke",
+    "test:e2e:responsive": "npm run test:e2e -w e2e -- tests/responsive --grep-invert visual",
+    "test:e2e:visual": "npm run test:e2e -w e2e -- tests/responsive/visual.spec.ts",
     "gen-client": "npm run generate -w packages/api-client --if-present"
   },
   "devDependencies": {

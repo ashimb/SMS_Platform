@@ -1,4 +1,4 @@
-import { Badge, Button, Skeleton, StatCard } from "@school-platform/ui";
+import { Badge, Button, Skeleton, StatCard, StatCardGrid } from "@school-platform/ui";
 import {
   CalendarCheck,
   ClipboardCheck,
@@ -107,7 +107,7 @@ export function AdminDashboard() {
     <div className="space-y-8">
       <DashboardGreeting asOf={query.data.as_of} />
 
-      <section aria-label={t("admin.keyFigures")} className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <StatCardGrid role="region" aria-label={t("admin.keyFigures")}>
         <StatCard
           label={t("admin.students")}
           value={formatNumber(stats.students_enrolled, locale)}
@@ -142,7 +142,7 @@ export function AdminDashboard() {
           value={formatNumber(stats.pending_approvals, locale)}
           icon={<ClipboardCheck />}
         />
-      </section>
+      </StatCardGrid>
 
       <QuickActions actions={actions} />
 

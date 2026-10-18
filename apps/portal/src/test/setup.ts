@@ -32,9 +32,30 @@ class ResizeObserverStub {
 const g = globalThis as Record<string, unknown>;
 g["ResizeObserver"] ??= ResizeObserverStub;
 
-window.matchMedia ??= (query: string) =>
+/**
+ * matchMedia that evaluates min/max-width against window.innerWidth (jsdom: 1024) and a fine
+ * pointer, so tests get the desktop presentation of responsive components by default; a test can
+ * set window.innerWidth (and call `window.dispatchEvent(new Event("resize"))`) to see a phone.
+ */
+function evaluateMedia(query: string): boolean {
+  return query.split(/\)\s*and\s*\(|,/).every((part) => {
+    const [feature = "", rawValue = ""] = part
+      .replace(/[()]/g, "")
+      .split(":")
+      .map((x) => x.trim());
+    const value = rawValue.replace("px", "");
+    if (feature === "min-width") return window.innerWidth >= Number(value);
+    if (feature === "max-width") return window.innerWidth <= Number(value);
+    if (feature === "pointer") return value === "fine";
+    if (feature === "hover") return value === "hover";
+    return false;
+  });
+}
+window.matchMedia = ((query: string) =>
   ({
-    matches: false,
+    get matches() {
+      return evaluateMedia(query);
+    },
     media: query,
     onchange: null,
     addEventListener: () => undefined,
@@ -42,7 +63,7 @@ window.matchMedia ??= (query: string) =>
     addListener: () => undefined,
     removeListener: () => undefined,
     dispatchEvent: () => false,
-  }) as MediaQueryList;
+  }) as unknown as MediaQueryList) as typeof window.matchMedia;
 window.scrollTo = () => undefined;
 const proto = Element.prototype as unknown as Record<string, unknown>;
 proto["scrollIntoView"] ??= () => undefined;

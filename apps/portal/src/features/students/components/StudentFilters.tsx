@@ -1,5 +1,5 @@
-import { Button, Input, Select } from "@school-platform/ui";
-import { Search, X } from "lucide-react";
+import { FilterSheet, Input, Select } from "@school-platform/ui";
+import { Search } from "lucide-react";
 import { useId } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -24,12 +24,13 @@ export function StudentFilters({
   onClear,
 }: StudentFiltersProps) {
   const { t } = useTranslation("students");
+  const { t: tCommon } = useTranslation("common");
   const searchId = useId();
   const statusId = useId();
   const active = search !== "" || status !== null;
 
   return (
-    <div role="search" className="flex flex-col gap-3 sm:flex-row sm:items-end">
+    <div role="search" className="flex flex-col gap-3 md:flex-row md:items-end">
       <div className="flex flex-1 flex-col gap-1.5">
         <label htmlFor={searchId} className="text-sm font-medium text-fg">
           {t("list.searchLabel")}
@@ -37,6 +38,8 @@ export function StudentFilters({
         <Input
           id={searchId}
           type="search"
+          inputMode="search"
+          enterKeyHint="search"
           leading={<Search />}
           placeholder={t("list.searchPlaceholder")}
           value={search}
@@ -51,28 +54,32 @@ export function StudentFilters({
           {t("list.searchHint")}
         </span>
       </div>
-      <div className="flex flex-col gap-1.5 sm:w-52">
-        <label htmlFor={statusId} className="text-sm font-medium text-fg">
-          {t("list.statusLabel")}
-        </label>
-        <Select
-          id={statusId}
-          value={status ?? ALL}
-          onValueChange={(value) => {
-            onStatusChange(value === ALL ? null : (value as StudentStatus));
-          }}
-          options={[
-            { value: ALL, label: t("list.allStatuses") },
-            ...STUDENT_STATUSES.map((value) => ({ value, label: t(`status.${value}`) })),
-          ]}
-        />
-      </div>
-      {active ? (
-        <Button type="button" variant="ghost" onClick={onClear} className="sm:mb-0">
-          <X aria-hidden="true" />
-          {t("list.clearFilters")}
-        </Button>
-      ) : null}
+      <FilterSheet
+        activeCount={status === null ? 0 : 1}
+        label={t("list.filters")}
+        clearLabel={t("list.clearFilters")}
+        applyLabel={t("list.showResults")}
+        closeLabel={tCommon("actions.close")}
+        activeLabel={(count) => t("list.activeFilters", { count })}
+        {...(active ? { onClear } : {})}
+      >
+        <div className="flex flex-col gap-1.5 md:w-52">
+          <label htmlFor={statusId} className="text-sm font-medium text-fg">
+            {t("list.statusLabel")}
+          </label>
+          <Select
+            id={statusId}
+            value={status ?? ALL}
+            onValueChange={(value) => {
+              onStatusChange(value === ALL ? null : (value as StudentStatus));
+            }}
+            options={[
+              { value: ALL, label: t("list.allStatuses") },
+              ...STUDENT_STATUSES.map((value) => ({ value, label: t(`status.${value}`) })),
+            ]}
+          />
+        </div>
+      </FilterSheet>
     </div>
   );
 }

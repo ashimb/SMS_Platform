@@ -13,13 +13,18 @@ import { bestTextColor, SCALE_STEPS } from "../src/theme/color.ts";
 import {
   brand,
   elevation,
+  fluid,
+  fluidSpacing,
+  fluidTypography,
   motion,
   neutral,
   PREFIX,
   radius,
+  safeArea,
   semantic,
   spacing,
   status,
+  touchTarget,
   typography,
 } from "../src/tokens/index.ts";
 
@@ -54,6 +59,18 @@ function baseVariables(): string[] {
   for (const [key, value] of Object.entries(spacing)) {
     lines.push(decl(`space-${String(key).replace(".", "_")}`, value));
   }
+  for (const [key, [min, max, leading]] of Object.entries(fluidTypography)) {
+    lines.push(decl(`fluid-text-${key}`, fluid(min, max)));
+    lines.push(decl(`fluid-leading-${key}`, String(leading)));
+  }
+  for (const [key, [min, max]] of Object.entries(fluidSpacing)) {
+    lines.push(decl(`space-fluid-${key}`, fluid(min, max)));
+  }
+  for (const [side, value] of Object.entries(safeArea)) lines.push(decl(`safe-${side}`, value));
+  lines.push(decl("touch", touchTarget));
+  // Space reserved by a fixed bottom bar (the portal's bottom navigation sets it); StickyActionBar
+  // sits above it.
+  lines.push(decl("bottom-offset", "0px"));
   for (const [key, value] of Object.entries(radius)) lines.push(decl(`radius-${key}`, value));
   for (const [key, value] of Object.entries(motion.duration))
     lines.push(decl(`duration-${key}`, value));
@@ -68,6 +85,28 @@ function themeVariables(theme: "light" | "dark"): string[] {
     lines.push(decl(`shadow-${level}`, value));
   lines.push(`  color-scheme: ${theme};`);
   return lines;
+}
+
+/** Stronger borders and secondary text for users who ask the OS for more contrast. */
+const moreContrast = {
+  light: {
+    border: `var(--${PREFIX}-neutral-500)`,
+    "border-strong": `var(--${PREFIX}-neutral-700)`,
+    "fg-muted": `var(--${PREFIX}-neutral-800)`,
+    "fg-subtle": `var(--${PREFIX}-neutral-700)`,
+  },
+  dark: {
+    border: `var(--${PREFIX}-neutral-400)`,
+    "border-strong": `var(--${PREFIX}-neutral-300)`,
+    "fg-muted": `var(--${PREFIX}-neutral-100)`,
+    "fg-subtle": `var(--${PREFIX}-neutral-200)`,
+  },
+} as const;
+
+function contrastLines(theme: "light" | "dark", indent = "  "): string {
+  return Object.entries(moreContrast[theme])
+    .map(([role, value]) => `${indent}${decl(role, value)}`)
+    .join("\n");
 }
 
 function tokensCss(): string {
@@ -87,6 +126,22 @@ ${themeVariables("dark").join("\n")}
 ${themeVariables("dark")
   .map((line) => `  ${line}`)
   .join("\n")}
+  }
+}
+
+/* prefers-contrast: more: stronger borders and secondary text. */
+@media (prefers-contrast: more) {
+  :root {
+${contrastLines("light", "  ")}
+  }
+  [data-theme="dark"] {
+${contrastLines("dark", "  ")}
+  }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+${contrastLines("dark", "  ")}
   }
 }
 
@@ -117,10 +172,21 @@ function themeCss(): string {
   }
   for (const role of Object.keys(semantic.light)) colors.push(`  --color-${role}: ${v(role)};`);
 
-  const type = Object.keys(typography.scale).flatMap((key) => [
-    `  --text-${key}: ${v(`text-${key}`)};`,
-    `  --text-${key}--line-height: ${v(`leading-${key}`)};`,
-  ]);
+  const type = [
+    ...Object.keys(typography.scale).flatMap((key) => [
+      `  --text-${key}: ${v(`text-${key}`)};`,
+      `  --text-${key}--line-height: ${v(`leading-${key}`)};`,
+    ]),
+    // Fluid sizes: `text-fluid-2xl` etc. (clamp() between 320px and 1280px viewports).
+    ...Object.keys(fluidTypography).flatMap((key) => [
+      `  --text-fluid-${key}: ${v(`fluid-text-${key}`)};`,
+      `  --text-fluid-${key}--line-height: ${v(`fluid-leading-${key}`)};`,
+    ]),
+  ];
+  // Fluid spacing: `p-fluid-4`, `gap-fluid-6`, `py-fluid-12`, ...
+  const fluidSpace = Object.keys(fluidSpacing).map(
+    (key) => `  --spacing-fluid-${key}: ${v(`space-fluid-${key}`)};`,
+  );
 
   return `${HEADER}
 /* Tailwind v4 theme: utilities resolve to the runtime CSS variables in tokens.css, so tenant
@@ -136,6 +202,8 @@ ${colors.join("\n")}
   --font-display: ${v("font-display")};
   --font-mono: ${v("font-mono")};
 ${type.join("\n")}
+
+${fluidSpace.join("\n")}
 
 ${Object.keys(radius)
   .map((key) => `  --radius-${key}: ${v(`radius-${key}`)};`)
@@ -163,6 +231,18 @@ ${Object.keys(motion.easing)
   @keyframes sp-slide-in-left { from { transform: translateX(-100%); } to { transform: none; } }
   @keyframes sp-slide-in-bottom { from { transform: translateY(100%); } to { transform: none; } }
 }
+
+/* Safe-area padding (notch / home indicator): \`pt-safe\`, \`pb-safe\`, \`px-safe\`, ... The insets are 0
+   unless the page uses viewport-fit=cover (both apps do). */
+@utility pt-safe { padding-top: ${v("safe-top")}; }
+@utility pb-safe { padding-bottom: ${v("safe-bottom")}; }
+@utility pl-safe { padding-left: ${v("safe-left")}; }
+@utility pr-safe { padding-right: ${v("safe-right")}; }
+@utility px-safe { padding-left: ${v("safe-left")}; padding-right: ${v("safe-right")}; }
+@utility py-safe { padding-top: ${v("safe-top")}; padding-bottom: ${v("safe-bottom")}; }
+/* Minimum touch target (44px). */
+@utility min-h-touch { min-height: ${v("touch")}; }
+@utility min-w-touch { min-width: ${v("touch")}; }
 
 @layer base {
   html {

@@ -6,6 +6,7 @@ import { type ReactNode, useEffect } from "react";
 import { Toaster } from "../src/components/Toast.tsx";
 import { TooltipProvider } from "../src/components/Tooltip.tsx";
 import { applyTenantTheme, clearTenantTheme } from "../src/theme/tenant-theme.ts";
+import { VIEWPORTS } from "./viewports.ts";
 
 const BRANDS: Record<string, string | undefined> = {
   default: undefined,
@@ -78,6 +79,8 @@ const preview: Preview = {
     controls: { expanded: true },
     // axe runs on every story in the Accessibility panel; violations are reported as errors.
     a11y: { test: "error" },
+    // Phones, tablets and desktop from the RESPONSIVE standard (toolbar: Viewport).
+    viewport: { options: VIEWPORTS },
   },
 };
 

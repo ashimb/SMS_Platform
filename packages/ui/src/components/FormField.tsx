@@ -95,10 +95,12 @@ export function FormField({
             {hint}
           </p>
         ) : null}
+        {/* The error line keeps its height even when empty, so validation messages appear without
+            pushing the rest of the form down (no layout shift). */}
         <p
           id={errorId}
           aria-live="polite"
-          className={cn("text-xs font-medium text-danger-subtle-fg", !error && "hidden")}
+          className={cn("min-h-4 text-xs font-medium text-danger-subtle-fg", !error && "invisible")}
         >
           {error}
         </p>

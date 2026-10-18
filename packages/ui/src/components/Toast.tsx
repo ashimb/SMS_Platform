@@ -13,6 +13,15 @@ export function Toaster(props: ComponentProps<typeof SonnerToaster>) {
       closeButton
       duration={5000}
       gap={8}
+      // Phones: toasts stack above the portal's bottom navigation and clear of the home
+      // indicator (and below the notch); desktop keeps the corner offset.
+      offset={{ top: "calc(var(--sp-safe-top) + 1rem)", right: "1rem" }}
+      mobileOffset={{
+        top: "calc(var(--sp-safe-top) + 0.75rem)",
+        bottom: "calc(var(--sp-safe-bottom) + var(--sp-bottom-offset, 0px) + 0.75rem)",
+        left: "0.75rem",
+        right: "0.75rem",
+      }}
       toastOptions={{
         classNames: {
           toast:

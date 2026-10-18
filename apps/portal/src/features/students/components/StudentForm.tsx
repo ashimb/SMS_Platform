@@ -3,7 +3,16 @@
  * numbers (409) are shown on the matching field, and focus moves to the first invalid field.
  */
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, Card, FormField, Input, Select } from "@school-platform/ui";
+import {
+  Button,
+  Card,
+  FormField,
+  FormGrid,
+  FormGridFull,
+  Input,
+  Select,
+  StickyActionBar,
+} from "@school-platform/ui";
 import { useMemo, useState } from "react";
 import { Controller, type FieldPath, type Resolver, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -148,114 +157,134 @@ export function StudentForm(props: StudentFormProps) {
           </div>
         ) : null}
 
-        <fieldset className="grid gap-5 p-5 sm:grid-cols-2 sm:p-6">
+        <fieldset className="p-5 sm:p-6">
           <legend className="sr-only">{t("form.identity")}</legend>
-          <div className="sm:col-span-2">
-            <h2 className="font-display text-base font-semibold text-fg">{t("form.identity")}</h2>
-            <p className="text-sm text-fg-muted">{t("form.identityHint")}</p>
-          </div>
-          <FormField
-            label={t("fields.admissionNo")}
-            required={!isEdit}
-            hint={isEdit ? t("form.readOnlyHint") : t("form.admissionNoHint")}
-            error={message("admission_no")}
-          >
-            <Input
-              autoComplete="off"
-              readOnly={isEdit}
-              disabled={isSubmitting}
-              {...register("admission_no")}
-            />
-          </FormField>
-          <FormField
-            label={t("fields.admissionDate")}
-            required={!isEdit}
-            error={message("admission_date")}
-          >
-            <Input
-              type="date"
-              max={today}
-              readOnly={isEdit}
-              disabled={isSubmitting}
-              {...register("admission_date")}
-            />
-          </FormField>
-          <FormField label={t("fields.firstName")} required error={message("first_name")}>
-            <Input autoComplete="off" disabled={isSubmitting} {...register("first_name")} />
-          </FormField>
-          <FormField label={t("fields.middleName")} error={message("middle_name")}>
-            <Input autoComplete="off" disabled={isSubmitting} {...register("middle_name")} />
-          </FormField>
-          <FormField label={t("fields.lastName")} error={message("last_name")}>
-            <Input autoComplete="off" disabled={isSubmitting} {...register("last_name")} />
-          </FormField>
-          <FormField
-            label={t("fields.dateOfBirth")}
-            required={!isEdit}
-            error={message("date_of_birth")}
-          >
-            <Input
-              type="date"
-              max={today}
-              readOnly={isEdit}
-              disabled={isSubmitting}
-              {...register("date_of_birth")}
-            />
-          </FormField>
-          <FormField label={t("fields.gender")} required={!isEdit} error={message("gender")}>
-            <Controller
-              control={control}
-              name="gender"
-              render={({ field }) => (
-                <Select
-                  name={field.name}
-                  value={field.value}
-                  onValueChange={field.onChange}
-                  placeholder={t("form.selectGender")}
-                  disabled={isEdit || isSubmitting}
-                  options={GENDERS.map((value) => ({ value, label: t(`gender.${value}`) }))}
-                />
-              )}
-            />
-          </FormField>
+          <FormGrid>
+            <FormGridFull className="mb-4">
+              <h2 className="font-display text-base font-semibold text-fg">{t("form.identity")}</h2>
+              <p className="text-sm text-fg-muted">{t("form.identityHint")}</p>
+            </FormGridFull>
+            <FormField
+              label={t("fields.admissionNo")}
+              required={!isEdit}
+              hint={isEdit ? t("form.readOnlyHint") : t("form.admissionNoHint")}
+              error={message("admission_no")}
+            >
+              <Input
+                autoComplete="off"
+                readOnly={isEdit}
+                disabled={isSubmitting}
+                {...register("admission_no")}
+              />
+            </FormField>
+            <FormField
+              label={t("fields.admissionDate")}
+              required={!isEdit}
+              error={message("admission_date")}
+            >
+              <Input
+                type="date"
+                max={today}
+                readOnly={isEdit}
+                disabled={isSubmitting}
+                {...register("admission_date")}
+              />
+            </FormField>
+            <FormField label={t("fields.firstName")} required error={message("first_name")}>
+              <Input
+                autoComplete="off"
+                enterKeyHint="next"
+                disabled={isSubmitting}
+                {...register("first_name")}
+              />
+            </FormField>
+            <FormField label={t("fields.middleName")} error={message("middle_name")}>
+              <Input
+                autoComplete="off"
+                enterKeyHint="next"
+                disabled={isSubmitting}
+                {...register("middle_name")}
+              />
+            </FormField>
+            <FormField label={t("fields.lastName")} error={message("last_name")}>
+              <Input autoComplete="off" disabled={isSubmitting} {...register("last_name")} />
+            </FormField>
+            <FormField
+              label={t("fields.dateOfBirth")}
+              required={!isEdit}
+              error={message("date_of_birth")}
+            >
+              <Input
+                type="date"
+                max={today}
+                readOnly={isEdit}
+                disabled={isSubmitting}
+                {...register("date_of_birth")}
+              />
+            </FormField>
+            <FormField label={t("fields.gender")} required={!isEdit} error={message("gender")}>
+              <Controller
+                control={control}
+                name="gender"
+                render={({ field }) => (
+                  <Select
+                    name={field.name}
+                    value={field.value}
+                    onValueChange={field.onChange}
+                    placeholder={t("form.selectGender")}
+                    disabled={isEdit || isSubmitting}
+                    options={GENDERS.map((value) => ({ value, label: t(`gender.${value}`) }))}
+                  />
+                )}
+              />
+            </FormField>
+          </FormGrid>
         </fieldset>
 
-        <fieldset className="grid gap-5 p-5 sm:grid-cols-2 sm:p-6">
+        <fieldset className="p-5 sm:p-6">
           <legend className="sr-only">{t("form.placement")}</legend>
-          <div className="sm:col-span-2">
-            <h2 className="font-display text-base font-semibold text-fg">{t("form.placement")}</h2>
-            <p className="text-sm text-fg-muted">{t("form.placementHint")}</p>
-          </div>
-          <FormField
-            label={t("fields.grade")}
-            hint={t("form.gradeHint")}
-            error={message("current_grade")}
-          >
-            <Input autoComplete="off" disabled={isSubmitting} {...register("current_grade")} />
-          </FormField>
-          <FormField
-            label={t("fields.section")}
-            hint={t("form.sectionHint")}
-            error={message("section")}
-          >
-            <Input autoComplete="off" disabled={isSubmitting} {...register("section")} />
-          </FormField>
+          <FormGrid>
+            <FormGridFull className="mb-4">
+              <h2 className="font-display text-base font-semibold text-fg">
+                {t("form.placement")}
+              </h2>
+              <p className="text-sm text-fg-muted">{t("form.placementHint")}</p>
+            </FormGridFull>
+            <FormField
+              label={t("fields.grade")}
+              hint={t("form.gradeHint")}
+              error={message("current_grade")}
+            >
+              <Input
+                autoComplete="off"
+                enterKeyHint="next"
+                disabled={isSubmitting}
+                {...register("current_grade")}
+              />
+            </FormField>
+            <FormField
+              label={t("fields.section")}
+              hint={t("form.sectionHint")}
+              error={message("section")}
+            >
+              <Input
+                autoComplete="off"
+                enterKeyHint="done"
+                disabled={isSubmitting}
+                {...register("section")}
+              />
+            </FormField>
+          </FormGrid>
         </fieldset>
-
-        <div className="flex flex-col-reverse gap-3 p-5 sm:flex-row sm:justify-end sm:p-6">
-          <Button
-            type="button"
-            variant="secondary"
-            onClick={props.onCancel}
-            disabled={isSubmitting}
-          >
-            {t("form.cancel")}
-          </Button>
-          <Button type="submit" loading={isSubmitting} disabled={isEdit && !isDirty}>
-            {isEdit ? t("form.saveChanges") : t("form.create")}
-          </Button>
-        </div>
       </Card>
+      <StickyActionBar aboveBottomNav>
+        <Button type="button" variant="secondary" onClick={props.onCancel} disabled={isSubmitting}>
+          {t("form.cancel")}
+        </Button>
+        <Button type="submit" loading={isSubmitting} disabled={isEdit && !isDirty}>
+          {isEdit ? t("form.saveChanges") : t("form.create")}
+        </Button>
+      </StickyActionBar>
     </form>
   );
 }

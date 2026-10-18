@@ -88,7 +88,7 @@ export function CommandPalette({ groups }: { groups: readonly ResolvedNavGroup[]
         title={t("palette.title")}
         description={t("palette.description")}
         closeLabel={t("actions.close")}
-        className="top-[15vh] translate-y-0"
+        className="md:top-[15dvh] md:translate-y-0"
       >
         <div className="flex items-center gap-2 rounded-lg border border-border bg-surface px-3 focus-within:ring-2 focus-within:ring-ring">
           <Search aria-hidden="true" className="size-4 text-fg-subtle" />
@@ -100,7 +100,7 @@ export function CommandPalette({ groups }: { groups: readonly ResolvedNavGroup[]
             aria-activedescendant={items[active] ? optionId(active) : undefined}
             aria-label={t("palette.inputLabel")}
             placeholder={t("palette.placeholder")}
-            className="h-11 w-full bg-transparent text-sm text-fg outline-none placeholder:text-fg-subtle"
+            className="h-11 w-full bg-transparent text-base text-fg outline-none placeholder:text-fg-subtle md:pointer-fine:text-sm"
             value={query}
             onChange={(event) => {
               setQuery(event.target.value);
@@ -128,7 +128,7 @@ export function CommandPalette({ groups }: { groups: readonly ResolvedNavGroup[]
                 tabIndex={-1}
                 aria-selected={index === active}
                 className={cn(
-                  "flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm",
+                  "flex min-h-11 cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm",
                   index === active ? "bg-primary-subtle text-primary-subtle-fg" : "text-fg",
                 )}
                 onMouseEnter={() => {

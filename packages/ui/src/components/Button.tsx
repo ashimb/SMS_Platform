@@ -25,14 +25,17 @@ export const buttonVariants = cva(
         danger: "bg-danger text-danger-fg shadow-1 hover:bg-danger-hover",
         link: "h-auto px-0 text-primary-subtle-fg underline-offset-4 hover:underline",
       },
+      // 44px minimum on phones and any touch device; compact sizes only for a mouse on wide screens.
       size: {
-        sm: "h-8 px-3 text-sm",
-        md: "h-10 px-4 text-sm",
+        sm: "h-11 px-4 text-sm md:pointer-fine:h-8 md:pointer-fine:px-3",
+        md: "h-11 px-4 text-sm md:pointer-fine:h-10",
         lg: "h-12 px-5 text-base",
-        icon: "size-10",
+        icon: "size-11 md:pointer-fine:size-10",
       },
     },
-    compoundVariants: [{ variant: "link", className: "h-auto px-0" }],
+    compoundVariants: [
+      { variant: "link", className: "h-auto min-h-11 px-0 md:pointer-fine:min-h-0" },
+    ],
     defaultVariants: { variant: "primary", size: "md" },
   },
 );

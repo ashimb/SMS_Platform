@@ -27,7 +27,7 @@ function LanguageSwitch() {
             void setLanguage(code as Language);
           }}
           className={cn(
-            "rounded-md px-2.5 py-1.5 transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
+            "inline-flex min-h-11 items-center rounded-md px-3 transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
             i18n.language === code
               ? "bg-surface-sunken font-semibold text-fg"
               : "text-fg-muted hover:text-fg",

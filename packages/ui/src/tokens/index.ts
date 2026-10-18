@@ -145,6 +145,60 @@ export const spacing = {
   24: "6rem",
 } as const;
 
+// ---- Fluid scales ---------------------------------------------------------------------------------
+// Sizes interpolate linearly between a 320px and a 1280px viewport and are clamped outside it:
+// clamp(min, intercept + slope * 100vw, max). Phones get the small end, desktops the large end,
+// with no breakpoint jumps. Body text never drops below 16px (iOS zooms smaller inputs).
+
+const FLUID_MIN_REM = 20; // 320px
+const FLUID_MAX_REM = 80; // 1280px
+
+/** `clamp()` that grows from `min` rem at 320px to `max` rem at 1280px. */
+export function fluid(minRem: number, maxRem: number): string {
+  const slope = (maxRem - minRem) / (FLUID_MAX_REM - FLUID_MIN_REM);
+  const intercept = minRem - slope * FLUID_MIN_REM;
+  const round = (value: number) => Number(value.toFixed(4));
+  return `clamp(${String(minRem)}rem, ${String(round(intercept))}rem + ${String(round(slope * 100))}vw, ${String(maxRem)}rem)`;
+}
+
+/** Fluid type scale: [min rem, max rem, unitless line-height]. Display sizes lead tighter. */
+export const fluidTypography = {
+  xs: [0.75, 0.8125, 1.4],
+  sm: [0.875, 0.9375, 1.45],
+  base: [1, 1.0625, 1.5],
+  lg: [1.125, 1.25, 1.5],
+  xl: [1.25, 1.5, 1.4],
+  "2xl": [1.5, 1.875, 1.3],
+  "3xl": [1.75, 2.375, 1.25],
+  "4xl": [2, 3, 1.15],
+  "5xl": [2.25, 3.75, 1.1],
+} as const;
+
+/** Fluid spacing for page and section rhythm: [min rem, max rem]. */
+export const fluidSpacing = {
+  2: [0.5, 0.75],
+  3: [0.75, 1],
+  4: [1, 1.5],
+  6: [1.5, 2.5],
+  8: [2, 3.5],
+  12: [3, 5],
+  16: [4, 7],
+} as const;
+
+/**
+ * Safe-area insets (iOS notch / home indicator, Android gesture bars). They are 0 unless the page
+ * sets `viewport-fit=cover`, which both apps do. Use with `pt-safe` / `pb-safe` utilities.
+ */
+export const safeArea = {
+  top: "env(safe-area-inset-top, 0px)",
+  right: "env(safe-area-inset-right, 0px)",
+  bottom: "env(safe-area-inset-bottom, 0px)",
+  left: "env(safe-area-inset-left, 0px)",
+} as const;
+
+/** Minimum touch target (WCAG 2.2 target size, 44 CSS px). */
+export const touchTarget = "2.75rem";
+
 export const radius = {
   xs: "0.25rem",
   sm: "0.375rem",
@@ -180,8 +234,9 @@ export const motion = {
   },
 } as const;
 
+/** Tailwind's default breakpoints: the single source of truth (RESPONSIVE standard). */
 export const breakpoints = {
-  sm: "360px",
+  sm: "640px",
   md: "768px",
   lg: "1024px",
   xl: "1280px",

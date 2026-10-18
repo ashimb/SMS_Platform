@@ -22,6 +22,8 @@ npm-debug.log*
 playwright-report/
 test-results/
 blob-report/
+.lighthouseci/
+e2e/lighthouse-report/
 playwright/.cache/
 
 # Python

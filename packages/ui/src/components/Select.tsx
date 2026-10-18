@@ -1,8 +1,9 @@
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check, ChevronDown } from "lucide-react";
 
+import { useBreakpoint, useCoarsePointer } from "../hooks/useMediaQuery.ts";
 import { cn } from "../lib/cn.ts";
-import { fieldBase } from "../lib/styles.ts";
+import { controlHeight, fieldBase } from "../lib/styles.ts";
 import { useFormField } from "./FormField.tsx";
 
 export interface SelectOption {
@@ -28,10 +29,89 @@ export interface SelectProps {
 }
 
 /**
- * Accessible single select (Radix): typeahead, arrow keys, Home/End, Escape, and a native
- * hidden <select> for form submission.
+ * Accessible single select.
+ *
+ *   - phones and any touch device: the platform's native `<select>`, which opens the operating
+ *     system's own picker sheet (large rows, familiar gestures, 16px text so iOS does not zoom);
+ *   - wide screens with a mouse: a Radix popover with typeahead, arrow keys, Home/End, Escape and
+ *     a native hidden `<select>` for form submission.
+ *
+ * Both render the same props, so forms need no changes. The first (server) render is the phone
+ * layout; the client switches right after hydration.
  */
-export function Select({
+export function Select(props: SelectProps) {
+  const wide = useBreakpoint("md");
+  const touch = useCoarsePointer();
+  return wide && !touch ? <PopoverSelect {...props} /> : <NativeSelect {...props} />;
+}
+
+function NativeSelect({
+  options,
+  value,
+  defaultValue,
+  onValueChange,
+  placeholder = "Select…",
+  invalid,
+  className,
+  id,
+  name,
+  required,
+  "aria-label": ariaLabel,
+  disabled,
+}: SelectProps) {
+  const field = useFormField({ id });
+  const controlled = value !== undefined;
+  const current = controlled ? value : defaultValue;
+  const showsPlaceholder = (current ?? "") === "" && !options.some((option) => option.value === "");
+  const isDisabled = disabled ?? field.disabled;
+
+  return (
+    <div className="relative">
+      <select
+        {...(field.id ? { id: field.id } : {})}
+        {...(name ? { name } : {})}
+        {...(controlled ? { value } : { defaultValue: defaultValue ?? "" })}
+        {...(isDisabled ? { disabled: true } : {})}
+        {...(required ? { required: true } : {})}
+        {...(field["aria-describedby"] ? { "aria-describedby": field["aria-describedby"] } : {})}
+        {...(invalid || field["aria-invalid"] ? { "aria-invalid": true } : {})}
+        {...(ariaLabel ? { "aria-label": ariaLabel } : {})}
+        onChange={(event) => {
+          onValueChange?.(event.target.value);
+        }}
+        className={cn(
+          fieldBase,
+          controlHeight,
+          "appearance-none truncate pr-10 pl-3",
+          showsPlaceholder && "text-fg-subtle",
+          className,
+        )}
+      >
+        {showsPlaceholder ? (
+          <option value="" disabled>
+            {placeholder}
+          </option>
+        ) : null}
+        {options.map((option) => (
+          <option
+            key={option.value}
+            value={option.value}
+            {...(option.disabled ? { disabled: true } : {})}
+            className="text-fg"
+          >
+            {option.label}
+          </option>
+        ))}
+      </select>
+      <ChevronDown
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-fg-subtle"
+      />
+    </div>
+  );
+}
+
+function PopoverSelect({
   options,
   placeholder = "Select…",
   invalid,
@@ -50,7 +130,8 @@ export function Select({
       <SelectPrimitive.Trigger
         className={cn(
           fieldBase,
-          "flex h-10 items-center justify-between gap-2 px-3 text-left data-placeholder:text-fg-subtle",
+          controlHeight,
+          "flex items-center justify-between gap-2 px-3 text-left data-placeholder:text-fg-subtle",
           className,
         )}
         {...(field.id ? { id: field.id } : {})}

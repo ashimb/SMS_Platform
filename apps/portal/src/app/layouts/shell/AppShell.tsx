@@ -1,6 +1,6 @@
 /**
- * Authenticated layout shared by the role layouts: skip link, desktop sidebar, sticky header,
- * mobile bottom navigation, command palette and idle-timeout warning. Route content renders in
+ * Authenticated layout shared by the role layouts: skip link, sidebar (icon rail on tablets), sticky header,
+ * phone bottom navigation, command palette and idle-timeout warning. Route content renders in
  * <main> inside an error boundary (reset on navigation) and a Suspense boundary for lazy routes.
  */
 import { Suspense, useEffect, useRef } from "react";
@@ -39,10 +39,11 @@ export function AppShell({ portal }: { portal: PortalKind }) {
   const pathname = useRouteFocus();
 
   return (
-    <div className="flex min-h-dvh bg-bg">
+    // --sp-bottom-offset is the height of the phone bottom bar; toasts and sticky action bars sit above it.
+    <div className="flex min-h-dvh bg-bg [--sp-bottom-offset:calc(3.5rem+env(safe-area-inset-bottom,0px))] md:[--sp-bottom-offset:0px]">
       <a
         href="#main"
-        className="sr-only z-50 rounded-md bg-primary px-4 py-2 text-primary-fg focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+        className="sr-only z-50 rounded-md bg-primary px-4 py-2 text-primary-fg focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:inline-flex focus:min-h-11 focus:items-center"
       >
         {t("nav.skipToContent")}
       </a>
@@ -52,7 +53,7 @@ export function AppShell({ portal }: { portal: PortalKind }) {
         <main
           id="main"
           tabIndex={-1}
-          className="mx-auto w-full max-w-7xl flex-1 px-4 pt-6 pb-24 outline-none sm:px-6 lg:px-8 lg:pb-10"
+          className="mx-auto w-full max-w-7xl flex-1 px-4 pt-6 pr-[max(1rem,env(safe-area-inset-right))] pb-[calc(var(--sp-bottom-offset)+1.5rem)] pl-[max(1rem,env(safe-area-inset-left))] outline-none sm:pr-[max(1.5rem,env(safe-area-inset-right))] sm:pl-[max(1.5rem,env(safe-area-inset-left))] md:pb-10 lg:px-8"
         >
           <ErrorBoundary resetKeys={[pathname]}>
             <Suspense fallback={<FullPageLoader label={t("states.loading")} />}>

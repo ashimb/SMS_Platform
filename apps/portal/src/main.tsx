@@ -45,6 +45,13 @@ createRoot(root).render(
   </StrictMode>,
 );
 
+if (import.meta.env.DEV) {
+  // Dev-only: name any element that makes the page scroll sideways (RESPONSIVE standard).
+  void import("@school-platform/ui/dev").then(({ installOverflowDetector }) => {
+    installOverflowDetector();
+  });
+}
+
 if (import.meta.env.PROD) {
   void import("./app/pwa.ts").then(({ registerServiceWorker }) => {
     registerServiceWorker();

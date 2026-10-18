@@ -162,6 +162,57 @@ Legend: 🔒 security-relevant · ⚙ ops/infra · 🧩 functional · 🧪 testi
 
 ---
 
+## Phase 5 — Public website (`apps/website`) and E2E (`e2e/`)
+
+### Security and delivery
+
+| # | Item | Why deferred | Target |
+|---|---|---|---|
+| P5-01 🔒 | **The website CSP is static, not nonce-based.** A per-request nonce makes every page dynamic, which disables ISR and CDN caching (Next.js docs, "Content Security Policy"). The policy is strict for everything except `script-src`/`style-src`, which allow `'unsafe-inline'` (Next's inline bootstrap scripts, the server-rendered tenant `<style>`). Mitigations: CMS HTML is allow-list sanitised, and `frame-ancestors`, `object-src`, `base-uri`, `form-action` and `default-src` are locked. | Conflicts with the ISR requirement | Hardening: try Next's experimental SRI (hash-based CSP, keeps static pages) and drop `'unsafe-inline'` for scripts |
+| P5-02 ⚙ | **The Docker stack was not run.** Docker Desktop's engine would not start in the build environment (the process launched but no engine pipe appeared), so these were not executed: the website image build, `docker compose up`, `seed_e2e`, and the full-stack Playwright run (portal, API, tenant-isolation, edge tests). They were written and type-checked, and the website part ran against a local production server. | Environment | Next time Docker is available: run the commands in `apps/website/README.md` → "Full-stack E2E" |
+| P5-03 ⚙ | `infra/docker/website.Dockerfile` has not been built (see P1-08, P5-02). The standalone output was verified locally (`node .next/standalone/apps/website/server.js`: health, signed webhook, runtime ISR re-render with `jsdom` traced). | Docker (P5-02) | Same as P5-02 |
+| P5-04 🧩 | Footer and contact "map" is a placeholder link/box. No map provider or consent flow is chosen (an embedded map would add a third-party origin to CSP and set cookies). | Needs a provider/privacy decision | Content phase |
+| P5-05 ⚙ | `eslint-config-next` 16 bundles its own react/jsx-a11y/import plugins with ESLint ≤ 9 peers and clashes with the shared flat config on ESLint 10. The website uses `@next/eslint-plugin-next` directly (its rules) on top of the shared config, which already has React hooks and jsx-a11y rules. `npm audit` reports 5 high findings, all dev-only: `braces` ReDoS via `@next/eslint-plugin-next → fast-glob`. Nothing ships to production. | Upstream | When `eslint-config-next` supports ESLint 10, or fast-glob updates |
+| P5-06 🔒 | The enquiry rate limiter is in memory, per website replica (effective limit = `limit × replicas`). nginx adds an edge limit and the API will add its own. | Good enough until the API endpoint exists | Move to Redis if the website is scaled out |
+
+### Content and API contract
+
+| # | Item | Why deferred | Target |
+|---|---|---|---|
+| P5-07 🧩 | **The public API contract is assumed.** The API's `cms` and `admissions` routers have no endpoints. The website reads `GET /api/public/v1/{site, home, notices, notices/{slug}, events, events/{slug}, gallery, pages, pages/{slug}}` and posts enquiries (snake_case) to `POST /api/public/v1/enquiries`. The zod schemas in `src/lib/cms-types.ts` are the contract; it runs on fixtures (`WEBSITE_DATA_SOURCE=mock`) and the mocked enquiry endpoint accepts without storing anything. | API modules not built | CMS and admissions phases: implement to this contract (or change the schemas) and call the signed revalidation webhook on publish |
+| P5-08 🧩 | With `WEBSITE_DATA_SOURCE=api` the image build cannot reach the API, so prerendering fails or bakes fixtures until the first ISR refresh. `generateStaticParams` already tolerates an unreachable CMS; the home page does not. | API not built | Make the build tolerant (fallback + short first revalidation) when the API ships |
+| P5-09 🧩 | A CMS page with an unknown block type or an unsafe link fails validation as a whole (the page returns a 500 error page) instead of dropping the bad block. Strict by design while the CMS does not exist. | Policy decision | Decide with the CMS editor UX |
+| P5-10 📦 | The website now self-hosts Inter (latin subset, variable, via `next/font/local`, see `apps/website/src/fonts`); the portal still uses system stacks (P3-07, P4-14). The latin subset has no Bengali or Devanagari glyphs, which fall back to the system fonts (P6-06). Hero and gallery art are generated placeholders (`scripts/generate-images.mjs`); real photography needs `WEBSITE_MEDIA_HOSTS` or files in `public/images`. | Licensing/art direction | Content phase |
+| P5-11 🧩 | No theme toggle on the website: it follows the OS light/dark setting. No analytics, cookie banner, or search. | Not requested | Marketing phase |
+
+### Testing
+
+| # | Item | Why deferred | Target |
+|---|---|---|---|
+| P5-12 🧪 | **E2E deviations from the brief.** (1) No saved storage state per role: sessions use rotating single-use refresh tokens, so a stored cookie reused by parallel workers or several browsers triggers reuse detection and revokes the session. Browser tests sign in through the UI; `global-setup.ts` verifies every seeded role can sign in. (2) "Parent" is a `viewer` (the API has no parent role yet). (3) Tenant isolation is tested in both directions (A cannot read B's student; B's admin cannot sign in on A) because host-based tenant resolution does not exist (P2-20), so a B session cannot be presented to A. | API/role gaps | Revisit with guardians module and host-based tenancy |
+| P5-13 🧪 | The CI `e2e-smoke` job now uses `docker-compose.e2e.yml`, runs migrations and `seed_e2e`, and runs `@smoke` on Chromium. It has never run on GitHub (P1-10). The five-browser matrix is not scheduled anywhere yet. | No remote / Docker | First push; add a nightly workflow for all projects |
+| P5-14 🧪 | Portal specs on Firefox/WebKit rely on `portal.localhost` resolving (Chromium and Firefox are told explicitly; WebKit uses the OS resolver, notably on Windows). Unverified because the stack did not run (P5-02). | Docker | First full-stack run |
+| P5-15 📦 | Lighthouse (desktop/mobile) category scores were captured through DevTools against a local production server (not through nginx/TLS/HTTP2). Performance metrics come from a DevTools trace (4× CPU, Fast 4G), not from a Lighthouse performance run. Home page JS is ~237 KB gzipped (React + Next runtime ~110 KB, Radix, motion). | Tooling | Add Lighthouse CI with budgets on staging |
+
+## Phase 6: responsive and mobile-first
+
+Audit and results: `docs/ui/responsive-audit.md` (baseline: 307 findings; now 16, all the plain `DataTable` primitive stories, left on purpose).
+
+| # | Item | Why deferred | Target |
+|---|---|---|---|
+| P6-01 🧩 | **Navigation badges** (unread counts on the bottom bar and sidebar) are not implemented: no notification or message data source exists yet. | No API | Communication module |
+| P6-02 🧪 | **Visual snapshots are per platform.** The 24 baselines in `e2e/tests/responsive/visual.spec.ts-snapshots` were created on Windows (`-win32`). CI (Linux) has none, so the CI step runs the responsive suite with `--grep-invert visual`. Generate Linux baselines on the runner (`npm run test:e2e:visual -- --update-snapshots`), review them, commit them, then drop the filter. | Needs a CI run | Before the first release |
+| P6-03 📦 | **Lighthouse CI runs through `npx @lhci/cli@0.15.1`**, not as a dependency, because installing it adds about a dozen high-severity advisories (puppeteer-core, tmp, proxy-agent chain) to the lockfile. The CI step has never run on GitHub (P1-10). Local result against the production builds behind nginx (mobile preset, 3 runs, median): website 0.95 / 1.00 (performance / accessibility), LCP 2.27 s, CLS 0, TBT 254 ms; portal sign-in and dashboard 0.99 / 1.00, LCP 1.2 s, CLS 0. The website LCP has only ~0.2 s of headroom against the 2.5 s budget, on a fast local machine with generated placeholder art (P5-10). | Needs a CI run | Phase 1 follow-up |
+| P6-04 🧪 | **The viewport suite emulates devices in Chromium**: no real iOS Safari or Android devices, so the iOS keyboard, rubber-banding, real notches and dynamic toolbars are unverified. `viewport-fit=cover` and `env(safe-area-inset-*)` are in place and asserted by class, not by pixels. Swipe-to-dismiss is tested with pointer events, not a real touch drag. | No devices | Manual QA before launch |
+| P6-05 🧩 | **Only the students list is a table in the portal**, so it is the only screen using `ResponsiveDataTable`. Every other module page is a placeholder (P4); each module that adds a list must use it (and `FilterSheet`, `StickyActionBar`, `FormGrid`). The dashboards use `StatCardGrid`; the attendance trend chart has a "View as table" toggle, other charts do not exist yet. | Modules do not exist | Each module phase |
+| P6-06 📦 | The website font is Inter latin only. Bengali (and Devanagari) text uses the system fallback; the portal has translations (`bn`) but the website content is English-only for now. | No localised website content | Localisation |
+| P6-07 🧪 | Five viewport-suite tests were flaky on first run after a stack restart (a cold first page load beyond 5 s) and passed on retry. The suite uses one retry like the rest of the E2E. The portal unit test `guards.test.tsx` failed once under parallel load and passed on three reruns. | Cold start | Revisit when CI exists |
+| P6-08 🧩 | The PWA manifest, icons and offline page already existed (Phase 4) and were not changed. API responses are still never cached; that policy was not re-verified in a browser this phase. The website has no manifest. | Not requested | — |
+| P6-09 🧩 | The mobile website CTA bar is hidden only on `/admissions` (the form is on that page). It shows on every other page below 640 px, including the contact page. | Judgement call | Marketing review |
+
+
+---
+
 ## Resolved
 
 | # | Item | Resolved in |

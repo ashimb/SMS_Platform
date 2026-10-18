@@ -40,29 +40,46 @@ export interface DataTableProps<TData extends RowData> {
   className?: string;
 }
 
-/**
- * Accessible table shell: semantic <table> with caption and column headers, sticky header,
- * horizontal scroll on small screens, and consistent loading / empty / error states.
- */
-export function DataTable<TData extends RowData>({
+/** The TanStack table instance shared by the table and the stacked-card presentations. */
+export function useDataTable<TData extends RowData>({
   data,
   columns,
-  caption,
-  showCaption = false,
   getRowId,
-  loading = false,
-  loadingRows = 5,
-  error,
-  empty,
-  className,
-}: DataTableProps<TData>) {
-  const table = useTable({
+}: Pick<DataTableProps<TData>, "data" | "columns" | "getRowId">) {
+  return useTable({
     features: dataTableFeatures,
     data,
     columns: columns as ColumnDef<DataTableFeatures, TData>[],
     ...(getRowId ? { getRowId: (row: TData) => getRowId(row) } : {}),
   });
+}
 
+export type DataTableInstance<TData extends RowData> = ReturnType<typeof useDataTable<TData>>;
+
+export interface DataTableViewProps<TData extends RowData> extends Omit<
+  DataTableProps<TData>,
+  "data" | "columns" | "getRowId"
+> {
+  table: DataTableInstance<TData>;
+  /**
+   * Tailwind max-height class (e.g. `max-h-[70dvh]`). The table then scrolls inside its own box,
+   * which is what keeps the header row stuck to the top while the rows scroll.
+   */
+  maxHeightClassName?: string;
+}
+
+/** The semantic <table> markup with loading, empty and error states. */
+export function DataTableView<TData extends RowData>({
+  table,
+  caption,
+  showCaption = false,
+  loading = false,
+  loadingRows = 5,
+  error,
+  empty,
+  className,
+  maxHeightClassName,
+}: DataTableViewProps<TData>) {
   const columnCount = Math.max(1, table.getAllLeafColumns().length);
   const rows = table.getRowModel().rows;
 
@@ -112,6 +129,7 @@ export function DataTable<TData extends RowData>({
     <div
       className={cn(
         "overflow-x-auto rounded-xl border border-border bg-surface shadow-1",
+        maxHeightClassName && ["overflow-y-auto overscroll-contain", maxHeightClassName],
         className,
       )}
       aria-busy={loading || undefined}
@@ -122,7 +140,7 @@ export function DataTable<TData extends RowData>({
         >
           {caption}
         </caption>
-        <thead className="sticky top-0 bg-surface-sunken">
+        <thead className="sticky top-0 z-10 bg-surface-sunken">
           {table.getHeaderGroups().map((group) => (
             <tr key={group.id} className="border-b border-border">
               {group.headers.map((header) => (
@@ -144,4 +162,19 @@ export function DataTable<TData extends RowData>({
       </table>
     </div>
   );
+}
+
+/**
+ * Accessible table shell: semantic <table> with caption and column headers, sticky header,
+ * horizontal scroll inside its own box, and consistent loading / empty / error states. For data
+ * that people read on phones, use ResponsiveDataTable (stacked cards below `md`).
+ */
+export function DataTable<TData extends RowData>({
+  data,
+  columns,
+  getRowId,
+  ...view
+}: DataTableProps<TData> & { maxHeightClassName?: string }) {
+  const table = useDataTable({ data, columns, ...(getRowId ? { getRowId } : {}) });
+  return <DataTableView table={table} {...view} />;
 }

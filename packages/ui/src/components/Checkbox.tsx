@@ -3,7 +3,7 @@ import { Check, Minus } from "lucide-react";
 import { type ComponentProps, type ReactNode, useId } from "react";
 
 import { cn } from "../lib/cn.ts";
-import { focusRing } from "../lib/styles.ts";
+import { focusRing, touchHitArea } from "../lib/styles.ts";
 import { useFormField } from "./FormField.tsx";
 
 export interface CheckboxProps extends ComponentProps<typeof CheckboxPrimitive.Root> {
@@ -25,6 +25,7 @@ export function Checkbox({ label, description, className, id, ...props }: Checkb
       id={checkboxId}
       className={cn(
         "peer grid size-5 shrink-0 place-items-center rounded-sm border border-border-strong bg-surface shadow-1 transition-colors duration-(--sp-duration-fast)",
+        touchHitArea,
         "hover:border-neutral-400 disabled:cursor-not-allowed disabled:opacity-50",
         "data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-fg",
         "data-[state=indeterminate]:border-primary data-[state=indeterminate]:bg-primary data-[state=indeterminate]:text-primary-fg",
@@ -50,16 +51,17 @@ export function Checkbox({ label, description, className, id, ...props }: Checkb
   if (!label) return box;
   return (
     <div className="flex items-start gap-3">
-      <div className="pt-0.5">{box}</div>
-      <div className="flex flex-col gap-0.5">
+      <div className="flex min-h-11 items-center">{box}</div>
+      <div className="flex min-w-0 flex-1 flex-col">
+        {/* The whole label row is the tap target: at least 44px tall and as wide as the row. */}
         <label
           htmlFor={checkboxId}
-          className="cursor-pointer text-sm font-medium text-fg peer-disabled:cursor-not-allowed"
+          className="flex min-h-11 cursor-pointer items-center text-sm font-medium text-fg"
         >
           {label}
         </label>
         {description ? (
-          <p id={descriptionId} className="text-xs text-fg-muted">
+          <p id={descriptionId} className="-mt-2 pb-2 text-xs text-fg-muted">
             {description}
           </p>
         ) : null}

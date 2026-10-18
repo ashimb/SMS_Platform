@@ -13,6 +13,16 @@
       "types": "./dist/src/index.d.ts",
       "import": "./dist/src/index.js"
     },
+    "./theme": {
+      "source": "./src/theme/index.ts",
+      "types": "./dist/src/theme/index.d.ts",
+      "import": "./dist/src/theme/index.js"
+    },
+    "./dev": {
+      "source": "./src/dev/overflow.ts",
+      "types": "./dist/src/dev/overflow.d.ts",
+      "import": "./dist/src/dev/overflow.js"
+    },
     "./tailwind-preset": {
       "types": "./dist/tailwind-preset.d.ts",
       "import": "./dist/tailwind-preset.js"

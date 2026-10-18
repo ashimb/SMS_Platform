@@ -139,6 +139,32 @@
   --text-4xl--line-height: var(--sp-leading-4xl);
   --text-5xl: var(--sp-text-5xl);
   --text-5xl--line-height: var(--sp-leading-5xl);
+  --text-fluid-xs: var(--sp-fluid-text-xs);
+  --text-fluid-xs--line-height: var(--sp-fluid-leading-xs);
+  --text-fluid-sm: var(--sp-fluid-text-sm);
+  --text-fluid-sm--line-height: var(--sp-fluid-leading-sm);
+  --text-fluid-base: var(--sp-fluid-text-base);
+  --text-fluid-base--line-height: var(--sp-fluid-leading-base);
+  --text-fluid-lg: var(--sp-fluid-text-lg);
+  --text-fluid-lg--line-height: var(--sp-fluid-leading-lg);
+  --text-fluid-xl: var(--sp-fluid-text-xl);
+  --text-fluid-xl--line-height: var(--sp-fluid-leading-xl);
+  --text-fluid-2xl: var(--sp-fluid-text-2xl);
+  --text-fluid-2xl--line-height: var(--sp-fluid-leading-2xl);
+  --text-fluid-3xl: var(--sp-fluid-text-3xl);
+  --text-fluid-3xl--line-height: var(--sp-fluid-leading-3xl);
+  --text-fluid-4xl: var(--sp-fluid-text-4xl);
+  --text-fluid-4xl--line-height: var(--sp-fluid-leading-4xl);
+  --text-fluid-5xl: var(--sp-fluid-text-5xl);
+  --text-fluid-5xl--line-height: var(--sp-fluid-leading-5xl);
+
+  --spacing-fluid-2: var(--sp-space-fluid-2);
+  --spacing-fluid-3: var(--sp-space-fluid-3);
+  --spacing-fluid-4: var(--sp-space-fluid-4);
+  --spacing-fluid-6: var(--sp-space-fluid-6);
+  --spacing-fluid-8: var(--sp-space-fluid-8);
+  --spacing-fluid-12: var(--sp-space-fluid-12);
+  --spacing-fluid-16: var(--sp-space-fluid-16);
 
   --radius-xs: var(--sp-radius-xs);
   --radius-sm: var(--sp-radius-sm);
@@ -171,6 +197,18 @@
   @keyframes sp-slide-in-left { from { transform: translateX(-100%); } to { transform: none; } }
   @keyframes sp-slide-in-bottom { from { transform: translateY(100%); } to { transform: none; } }
 }
+
+/* Safe-area padding (notch / home indicator): `pt-safe`, `pb-safe`, `px-safe`, ... The insets are 0
+   unless the page uses viewport-fit=cover (both apps do). */
+@utility pt-safe { padding-top: var(--sp-safe-top); }
+@utility pb-safe { padding-bottom: var(--sp-safe-bottom); }
+@utility pl-safe { padding-left: var(--sp-safe-left); }
+@utility pr-safe { padding-right: var(--sp-safe-right); }
+@utility px-safe { padding-left: var(--sp-safe-left); padding-right: var(--sp-safe-right); }
+@utility py-safe { padding-top: var(--sp-safe-top); padding-bottom: var(--sp-safe-bottom); }
+/* Minimum touch target (44px). */
+@utility min-h-touch { min-height: var(--sp-touch); }
+@utility min-w-touch { min-width: var(--sp-touch); }
 
 @layer base {
   html {
